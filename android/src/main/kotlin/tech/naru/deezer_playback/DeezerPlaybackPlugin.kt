@@ -39,8 +39,7 @@ import io.flutter.plugin.common.PluginRegistry
 import java.sql.Connection
 import kotlin.concurrent.fixedRateTimer
 
-class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : MethodCallHandler ,
-    StreamHandler {
+class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : MethodCallHandler {
 
       // The Deezer global reference
     private var mPlayer: PlayerWrapper ?= null
