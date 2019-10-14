@@ -39,51 +39,25 @@ import io.flutter.plugin.common.PluginRegistry
 import java.sql.Connection
 import kotlin.concurrent.fixedRateTimer
 
-class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : MethodCallHandler {
-  companion object {
-    @JvmStatic
-    fun registerWith(registrar: Registrar) {
-      val channel = MethodChannel(registrar.messenger(), "deezer_playback")
-      channel.setMethodCallHandler(DeezerPlaybackPlugin())
-    }
-  }
+class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : MethodCallHandler ,
+    StreamHandler {
 
-  override fun onMethodCall(call: MethodCall, result: Result) {
-    if (call.method == "getPlatformVersion") {
-      result.success("Android ${android.os.Build.VERSION.RELEASE}")
-    } else {
-      result.notImplemented()
-    }
-  }
-  // The Deezer global reference
+      // The Deezer global reference
     private var mPlayer: PlayerWrapper ?= null
     private var sessionStore = SessionStore()
     private var  mDeezerConnect: DeezerConnect?= null
-    private var trackPlayer = TrackPlayer(registrar.activity().application,mDeezerConnect ,WifiAndMobileNetworkStateChecker())
+    
     private var permissions = arrayOf(Permissions.BASIC_ACCESS, Permissions.MANAGE_LIBRARY, Permissions.LISTENING_HISTORY)
-    // The listener for authentication events
-    private val listener = object : DialogListener {
-
-        override fun onComplete(values: Bundle) {
-            // store the current authentication info
-            val sessionStore = SessionStore()
-            sessionStore.save(mDeezerConnect, registrar.context())
-
-            // Launch the Home activity
-
-        }
-
-        override fun onException(exception: Exception) {
-
-        }
-
-
-        override fun onCancel() {
-
-        }
-
-
+  companion object {
+    @JvmStatic
+    fun registerWith(registrar: Registrar) {
+        // Register the spotify playback method channel to call the methods from dart
+      val channel = MethodChannel(registrar.messenger(), "deezer_playback")
+      channel.setMethodCallHandler(DeezerPlaybackPlugin(registrar))
     }
+  }
+  
+  
 
 
 
@@ -96,8 +70,7 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
           result: Result
   ) {
 
-
-      val playbackControls = PlaybackControls(mDeezerConnect=mDeezerConnect,mPlayer = mPlayer)
+    val playbackControls = PlaybackControls(mDeezerConnect=mDeezerConnect,mPlayer = mPlayer)
     val seekControls = SeekControls(mDeezerConnect=mDeezerConnect,mPlayer = mPlayer)
     when {
       call.method == "iniatilizeDeezer" -> iniatilizeDeezer(
@@ -141,7 +114,30 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
 
       }
     }*/
+    private var trackPlayer = TrackPlayer(registrar.activity().application,mDeezerConnect ,WifiAndMobileNetworkStateChecker())
+    // The listener for authentication events
+    private val listener = object : DialogListener {
 
+        override fun onComplete(values: Bundle) {
+            // store the current authentication info
+            val sessionStore = SessionStore()
+            sessionStore.save(mDeezerConnect, registrar.context())
+
+            // Launch the Home activity
+
+        }
+
+        override fun onException(exception: Exception) {
+
+        }
+
+
+        override fun onCancel() {
+
+        }
+
+
+    }
     private fun iniatilizeDeezer(appId: String?, result:Result) {
         if (appId != null) {
             mDeezerConnect = DeezerConnect(registrar.context(),appId)
