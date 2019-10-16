@@ -44,6 +44,7 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
       // The Deezer global reference
     private var mPlayer: PlayerWrapper ?= null
     private var  mDeezerConnect: DeezerConnect?= null
+    private var trackPlayer : TrackPlayer ?= null
     
     private var permissions = arrayOf(Permissions.BASIC_ACCESS, Permissions.MANAGE_LIBRARY, Permissions.LISTENING_HISTORY)
   companion object {
@@ -112,7 +113,7 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
 
       }
     }*/
-    private var trackPlayer = TrackPlayer()
+    
     // The listener for authentication events
     private val listener = object : DialogListener {
 
@@ -161,7 +162,7 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
     ) {
 
         if (mDeezerConnect!=null && trackID !=null) {
-            trackPlayer.playTrack(trackID.toLong())
+            trackPlayer!!.playTrack(trackID.toLong())
             result.success(true)
         } else {
             result.error("play", "error", "no Deezer Playlist")
