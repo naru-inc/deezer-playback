@@ -44,7 +44,6 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
       // The Deezer global reference
     private var mPlayer: PlayerWrapper ?= null
     private var  mDeezerConnect: DeezerConnect?= null
-    private var trackPlayer : TrackPlayer ?= null
     
     private var permissions = arrayOf(Permissions.BASIC_ACCESS, Permissions.MANAGE_LIBRARY, Permissions.LISTENING_HISTORY)
   companion object {
@@ -113,7 +112,7 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
 
       }
     }*/
-    
+    private var trackPlayer : TrackPlayer ?=null
     // The listener for authentication events
     private val listener = object : DialogListener {
 
