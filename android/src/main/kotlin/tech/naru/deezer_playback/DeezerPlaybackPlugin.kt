@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.util.Log
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.TextView;
-import android.widget.Toast;
 import com.deezer.sdk.model.Track
 import com.deezer.sdk.network.connect.DeezerConnect
 import com.deezer.sdk.network.connect.event.DialogError
