@@ -44,6 +44,8 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
       // The Deezer global reference
     private var mPlayer: PlayerWrapper ?= null
     private var sessionStore = SessionStore()
+    private AlbumPlayer mAlbumPlayer;
+    private TrackPlayer mTrackPlayer;
     private var  mDeezerConnect: DeezerConnect?= null
     
     private var permissions = arrayOf(Permissions.BASIC_ACCESS, Permissions.MANAGE_LIBRARY, Permissions.LISTENING_HISTORY)
@@ -113,9 +115,7 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
 
       }
     }*/
-     private var album = AlbumPlayer(registrar.activity().application,mDeezerConnect ,WifiAndMobileNetworkStateChecker()) 
-    private var trackPlayer = TrackPlayer(registrar.activity().application,mDeezerConnect ,WifiAndMobileNetworkStateChecker())
-
+    
     // The listener for authentication events
     private val listener = object : DialogListener {
 
@@ -123,6 +123,8 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
             // store the current authentication info
             val sessionStore = SessionStore()
             sessionStore.save(mDeezerConnect, registrar.context())
+            mAlbumPlayer = AlbumPlayer(registrar.activity().application,mDeezerConnect ,WifiAndMobileNetworkStateChecker()) 
+            mTrackPlayer = TrackPlayer(registrar.activity().application,mDeezerConnect ,WifiAndMobileNetworkStateChecker())
 
             // Launch the Home activity
 
@@ -143,6 +145,8 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
         if (appId != null) {
             mDeezerConnect = DeezerConnect(registrar.context(),appId)
             // The set of Deezer Permissions needed by the app
+            
+
             result.success(true)
         } else {
 
