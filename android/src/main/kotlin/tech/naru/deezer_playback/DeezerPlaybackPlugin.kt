@@ -113,7 +113,9 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
 
       }
     }*/
+     private var album = AlbumPlayer(registrar.activity().application,mDeezerConnect ,WifiAndMobileNetworkStateChecker()) 
     private var trackPlayer = TrackPlayer(registrar.activity().application,mDeezerConnect ,WifiAndMobileNetworkStateChecker())
+
     // The listener for authentication events
     private val listener = object : DialogListener {
 
