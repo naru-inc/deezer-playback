@@ -11,8 +11,6 @@ import com.deezer.sdk.network.connect.DeezerConnect
 import com.deezer.sdk.network.connect.event.DialogError
 import com.deezer.sdk.network.connect.event.DialogListener
 import com.deezer.sdk.network.request.event.DeezerError
-import com.deezer.sdk.player.AlbumPlayer
-import com.deezer.sdk.player.TrackPlayer
 import com.deezer.sdk.player.event.OnBufferProgressListener
 import com.deezer.sdk.player.event.OnPlayerProgressListener
 import com.deezer.sdk.player.event.RadioPlayerListener
@@ -43,9 +41,7 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
 
       // The Deezer global reference
     private var mPlayer: PlayerWrapper ?= null
-    private var sessionStore = SessionStore()
-    private var mAlbumPlayer :AlbumPlayer ?= null
-    private var mTrackPlayer : TrackPlayer ?= null
+    private var mTrackPlayer : TrackPlayer
     private var  mDeezerConnect: DeezerConnect?= null
     
     private var permissions = arrayOf(Permissions.BASIC_ACCESS, Permissions.MANAGE_LIBRARY, Permissions.LISTENING_HISTORY)
@@ -123,7 +119,6 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
             // store the current authentication info
             val sessionStore = SessionStore()
             sessionStore.save(mDeezerConnect, registrar.context())
-            mAlbumPlayer = AlbumPlayer(registrar.activity().application,mDeezerConnect ,WifiAndMobileNetworkStateChecker()) 
             mTrackPlayer = TrackPlayer(registrar.activity().application,mDeezerConnect ,WifiAndMobileNetworkStateChecker())
 
             // Launch the Home activity
