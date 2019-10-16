@@ -44,8 +44,8 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
       // The Deezer global reference
     private var mPlayer: PlayerWrapper ?= null
     private var sessionStore = SessionStore()
-    private AlbumPlayer mAlbumPlayer;
-    private TrackPlayer mTrackPlayer;
+    private var mAlbumPlayer :AlbumPlayer ?= null
+    private var mTrackPlayer : TrackPlayer ?= null
     private var  mDeezerConnect: DeezerConnect?= null
     
     private var permissions = arrayOf(Permissions.BASIC_ACCESS, Permissions.MANAGE_LIBRARY, Permissions.LISTENING_HISTORY)
