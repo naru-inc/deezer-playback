@@ -13,6 +13,8 @@ import com.deezer.sdk.network.connect.DeezerConnect
 import com.deezer.sdk.network.connect.event.DialogError
 import com.deezer.sdk.network.connect.event.DialogListener
 import com.deezer.sdk.network.request.event.DeezerError
+import com.deezer.sdk.player.AlbumPlayer
+import com.deezer.sdk.player.TrackPlayer
 import com.deezer.sdk.player.event.OnBufferProgressListener
 import com.deezer.sdk.player.event.OnPlayerProgressListener
 import com.deezer.sdk.player.event.RadioPlayerListener
