@@ -112,7 +112,7 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
 
       }
     }*/
-    private var trackPlayer : TrackPlayer
+    private var trackPlayer : TrackPlayer ?null
     // The listener for authentication events
     private val listener = object : DialogListener {
 
