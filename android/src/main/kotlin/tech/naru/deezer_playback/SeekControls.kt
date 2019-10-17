@@ -5,14 +5,15 @@ import com.deezer.sdk.player.PlayerWrapper;
 import com.deezer.sdk.player.PlayerWrapper.RepeatMode;
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry
+import com.deezer.sdk.player.*
 
-class SeekControls(val mDeezerConnect: DeezerConnect?, val mPlayer : PlayerWrapper?) : BaseControl(mDeezerConnect) {
+class SeekControls(val mDeezerConnect: DeezerConnect?, val  trackPlayer : TrackPlayer?) : BaseControl(mDeezerConnect) {
     internal fun seekTo(
             time: String?,
             result: Result
     ) {
-        if (mPlayer != null && time != null) {
-            mPlayer.seek(time.toLong())
+        if (mDeezerConnect != null && time != null) {
+            trackPlayer!!.seek(time.toLong())
             result.success(true)
 
         } else {
@@ -23,8 +24,8 @@ class SeekControls(val mDeezerConnect: DeezerConnect?, val mPlayer : PlayerWrapp
             relativeTime: String?,
             result: Result
     ) {
-        if (mPlayer != null && relativeTime != null) {
-            mPlayer.seek(relativeTime.toLong());
+        if (mDeezerConnect != null && relativeTime != null) {
+            trackPlayer!!.seek(relativeTime.toLong());
             result.success(true)
         } else {
             result.error("seekTo", "error", "no Deezer Player")

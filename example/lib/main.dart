@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'dart:typed_data';
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'credentials.dart';
-import 'package:flutter/services.dart';
 import 'package:deezer_playback/deezer_playback.dart';
 
 void main() => runApp(MyApp());
@@ -17,11 +14,16 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   String _platformVersion = 'Unknown';
   bool _connectedToDeezer = false;
+  bool _initDeezer = false;
+  bool isPlaying = false;
 
   @override
   void initState() {
     super.initState();
     initPlatformState();
+    initConnector();
+    connect();
+    play("3135580");
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
@@ -44,17 +46,36 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
-/// Initialize the Deezer playback sdk, by calling DeezerConnect
+  /// Initialize the Deezer playback sdk, by calling DeezerConnect
   Future<void> initConnector() async {
     try {
-      await DeezerPlayback.iniatilizeDeezer(
-              appId: Credentials.appId)
-          .then((connected) {
+      await DeezerPlayback.iniatilizeDeezer(appId: Credentials.appId).then(
+          (connected) {
         if (!mounted) return;
         // If the method call is successful, update the state to reflect this change
         setState(() {
-          _connectedToDeezer = connected;
+          _initDeezer = connected;
         });
+        print(_initDeezer);
+      }, onError: (error) {
+        // If the method call trows an error, print the error to see what went wrong
+        print(error);
+      });
+    } on PlatformException {
+      print('Failed to connect.');
+    }
+  }
+
+  /// Initialize the Deezer playback sdk, by calling DeezerConnect
+  Future<void> connect() async {
+    try {
+      await DeezerPlayback.connectToDeezer().then((authorised) {
+        if (!mounted) return;
+        // If the method call is successful, update the state to reflect this change
+        setState(() {
+          _connectedToDeezer = authorised;
+        });
+        print("we authorized deezer");
       }, onError: (error) {
         // If the method call trows an error, print the error to see what went wrong
         print(error);
@@ -69,6 +90,7 @@ class _MyAppState extends State<MyApp> {
     try {
       await DeezerPlayback.play(id).then((success) {
         print(success);
+        isPlaying = true;
       }, onError: (error) {
         print(error);
       });
@@ -77,11 +99,20 @@ class _MyAppState extends State<MyApp> {
     }
   }
 
+  Future<void> pauseorResume() async {
+    if (isPlaying) {
+      pause();
+    } else {
+      resume();
+    }
+  }
+
   /// Pause the currently playing track
   Future<void> pause() async {
     try {
       await DeezerPlayback.pause().then((success) {
         print(success);
+        isPlaying = false;
       }, onError: (error) {
         print(error);
       });
@@ -95,6 +126,7 @@ class _MyAppState extends State<MyApp> {
     try {
       await DeezerPlayback.resume().then((success) {
         print(success);
+        isPlaying = true;
       }, onError: (error) {
         print(error);
       });
@@ -102,7 +134,6 @@ class _MyAppState extends State<MyApp> {
       print('Failed to resume.');
     }
   }
-
 
   /// Seek to a defined time in a song
   Future<void> seekTo() async {
@@ -192,8 +223,20 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Deezer PlayBack Example'),
         ),
         body: Center(
-          child: Text('Running on: $_platformVersion\n'),
-        ),
+            child: FlatButton(
+          color: Colors.blue,
+          textColor: Colors.white,
+          disabledColor: Colors.grey,
+          disabledTextColor: Colors.black,
+          padding: EdgeInsets.all(8.0),
+          splashColor: Colors.blueAccent,
+          onPressed: () {
+            seekTo();
+          },
+          child: Text(
+            "Play/Pause",
+          ),
+        )),
       ),
     );
   }

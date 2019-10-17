@@ -42,7 +42,8 @@ import kotlin.concurrent.fixedRateTimer
 class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : MethodCallHandler {
 
       // The Deezer global reference
-    private var mPlayer: PlayerWrapper ?= null
+     private var trackPlayer : TrackPlayer ?=null
+     private var mPlayer : PlayerWrapper ?=null
     private var  mDeezerConnect: DeezerConnect?= null
     
     private var permissions = arrayOf(Permissions.BASIC_ACCESS, Permissions.MANAGE_LIBRARY, Permissions.LISTENING_HISTORY)
@@ -68,8 +69,8 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
           result: Result
   ) {
 
-    val playbackControls = PlaybackControls(mDeezerConnect=mDeezerConnect,mPlayer = mPlayer)
-    val seekControls = SeekControls(mDeezerConnect=mDeezerConnect,mPlayer = mPlayer)
+    val playbackControls = PlaybackControls(mDeezerConnect=mDeezerConnect,trackPlayer = trackPlayer)
+    val seekControls = SeekControls(mDeezerConnect=mDeezerConnect,trackPlayer = trackPlayer)
     when {
       call.method == "iniatilizeDeezer" -> iniatilizeDeezer(
               call.argument("appId"), result
@@ -112,7 +113,7 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
 
       }
     }*/
-    private var trackPlayer : TrackPlayer ?=null
+   
     // The listener for authentication events
     private val listener = object : DialogListener {
 
@@ -120,7 +121,7 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
             // store the current authentication info
             val sessionStore = SessionStore()
             sessionStore.save(mDeezerConnect, registrar.context())
-            trackPlayer = TrackPlayer(registrar.activity().application,mDeezerConnect ,WifiAndMobileNetworkStateChecker())
+          
             // Launch the Home activity
 
         }
@@ -139,6 +140,7 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
     private fun iniatilizeDeezer(appId: String?, result:Result) {
         if (appId != null) {
             mDeezerConnect = DeezerConnect(registrar.context(),appId)
+             trackPlayer = TrackPlayer(registrar.activity().application,mDeezerConnect ,WifiAndMobileNetworkStateChecker())
             // The set of Deezer Permissions needed by the app
             result.success(true)
         } else {
@@ -170,7 +172,7 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
 
     private fun getPlaybackPosition(result: Result) {
         if (mDeezerConnect != null) {
-            result.success( mPlayer!!.position)
+            result.success( trackPlayer!!.position)
         }
     }
     private fun connected(result: Result) {

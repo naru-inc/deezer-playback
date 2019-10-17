@@ -5,11 +5,9 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "kotlin",
+            "name": "Flutter",
             "request": "launch",
-            "name": "Kotlin Launch",
-            "projectRoot": "${workspaceFolder}",
-            "mainClass": "path.to.your.MainClassKt"
+            "type": "dart"
         }
     ]
 }
