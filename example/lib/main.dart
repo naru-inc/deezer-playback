@@ -1,6 +1,9 @@
+import 'package:deezer_playback_example/deezerTrack.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter/services.dart';
+import 'dart:convert';
+import 'package:dio/dio.dart';
 import 'credentials.dart';
 import 'package:deezer_playback/deezer_playback.dart';
 
@@ -16,6 +19,7 @@ class _MyAppState extends State<MyApp> {
   bool _connectedToDeezer = false;
   bool _initDeezer = false;
   bool isPlaying = false;
+  Dio dio = new Dio();
 
   @override
   void initState() {
@@ -23,7 +27,7 @@ class _MyAppState extends State<MyApp> {
     initPlatformState();
     initConnector();
     connect();
-    play("3135580");
+    searchTrack("metallica");
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
@@ -75,7 +79,7 @@ class _MyAppState extends State<MyApp> {
         setState(() {
           _connectedToDeezer = authorised;
         });
-        print("we authorized deezer");
+        print("we authorized deezer"+_connectedToDeezer.toString());
       }, onError: (error) {
         // If the method call trows an error, print the error to see what went wrong
         print(error);
@@ -84,7 +88,31 @@ class _MyAppState extends State<MyApp> {
       print('Failed to connect.');
     }
   }
+Future<List<DeezerTrack>> searchTrack(String search) async {
+    try {
+Response response = await dio.get("https://api.deezer.com/search?q=track:"+search+"&strict=off");   
+ print(response.data);
+ var jsons = (response.data)["data"] as List;
 
+List<DeezerTrack> deezerTracks =[];
+jsons.forEach((json)=> {
+   deezerTracks.add(DeezerTrack.fromDeezer(json))
+});
+print(deezerTracks[0].title);
+      /*
+     static const album = SearchType("album");
+  static const artist = SearchType("artist");
+  static const playlist = SearchType("playlist");
+  static const track = SearchType("track");
+  */
+      return deezerTracks;
+
+      //return tracks.toList();
+    } catch (e) {
+      print(e);
+      return null;
+    }
+  }
   /// Play an song by Deezer track/album/playlist id
   Future<void> play(String id) async {
     try {
