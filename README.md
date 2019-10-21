@@ -25,7 +25,8 @@ First, add `deezer_playback` as a dependency in your `pubspec.yaml` file.
 
 Afterwards, download the Deezer Android SDK [here](https://developers.deezer.com/sdk/android) and move the deezer-sdk--x.x.x.aar file to `android/app/libs/` in your project.
 
-**`IMPORTANT:` Make sure you add permissions to your Android Manifest !**
+**`IMPORTANT:` Make sure you add permissions bellow to your Android Manifest located in `/android/app/src/main/AndroidManifest.xml` !**
+
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
