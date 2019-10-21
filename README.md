@@ -23,7 +23,16 @@ Deezer Playback Plugin.
 
 First, add `deezer_playback` as a dependency in your `pubspec.yaml` file. 
 
-Afterwards, download the Deezer Android SDK [here](https://developers.deezer.com/sdk/android) and move the spotify-app-remote-release-x.x.x.aar file to `android/app/libs/` in your project.
+Afterwards, download the Deezer Android SDK [here](https://developers.deezer.com/sdk/android) and move the deezer-sdk--x.x.x.aar file to `android/app/libs/` in your project.
+
+**`IMPORTANT:` Make sure you add permissions to your Android Manifest !**
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.WAKE_LOCK" />
+<uses-library android:name="org.apache.http.legacy" android:required="false" />
+
+```
 
 Then initialize the deezer playback sdk like this 
 
