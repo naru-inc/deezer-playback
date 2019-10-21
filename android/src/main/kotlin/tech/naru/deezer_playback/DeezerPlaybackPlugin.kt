@@ -140,7 +140,7 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
     private fun iniatilizeDeezer(appId: String?, result:Result) {
         if (appId != null) {
             mDeezerConnect = DeezerConnect(registrar.context(),appId)
-             trackPlayer = TrackPlayer(registrar.activity().application,mDeezerConnect ,WifiAndMobileNetworkStateChecker())
+           
             // The set of Deezer Permissions needed by the app
             result.success(true)
         } else {
@@ -149,11 +149,15 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
         }
     }
     private fun connectToDeezer( result:Result) {
-        if (mDeezerConnect != null) {
-            mDeezerConnect!!.authorize(registrar.activity(), permissions, listener)
+        if (mDeezerConnect!!.isSessionValid) {
             result.success(true)
-        } else {
-
+              trackPlayer = TrackPlayer(registrar.activity().application,mDeezerConnect ,WifiAndMobileNetworkStateChecker())
+        } else if(mDeezerConnect!=null) {
+           mDeezerConnect!!.authorize(registrar.activity(), permissions, listener)
+             trackPlayer = TrackPlayer(registrar.activity().application,mDeezerConnect ,WifiAndMobileNetworkStateChecker())
+            result.success(true)
+        }else{
+            trackPlayer = TrackPlayer(registrar.activity().application,mDeezerConnect ,WifiAndMobileNetworkStateChecker())
             result.error("connect", "error", "the Id you're making is not valid")
         }
     }
