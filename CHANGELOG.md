@@ -1,3 +1,5 @@
-## 0.0.1
+# 0.0.1
 
-* TODO: Describe initial release.
+* Deezer Remote Playback for Android
+* Deezer Web API
+* Fixing Minor Bugs
