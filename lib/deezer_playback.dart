@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:dio/dio.dart';
 import 'package:flutter/services.dart';
+
 
 class DeezerPlayback {
   static const MethodChannel _channel =
@@ -87,5 +89,31 @@ class DeezerPlayback {
         "seekToRelativePosition", {"relativeTime": relativeTime.toString()});
     return success;
   }
+static Future<List> searchTracks(String search) async {
+    Dio dio = new Dio();
+    try {
+Response response = await dio.get("https://api.deezer.com/search?q=track:"+search+"&strict=off");   
+ var jsons = (response.data)["data"] as List;
+      return jsons;
 
+      //return tracks.toList();
+    } catch (e) {
+      print(e);
+      return null;
+    }
+  }
+   static Future<Object> getTrack(String id) async {
+    Dio dio = new Dio();
+    try {
+      Response response = await dio.get(
+          "https://api.deezer.com/track/" + id);
+
+      var json = (response.data);
+      return json;
+      //return tracks.toList();
+    } catch (e) {
+      print(e);
+      return null;
+    }
+  }
 }
