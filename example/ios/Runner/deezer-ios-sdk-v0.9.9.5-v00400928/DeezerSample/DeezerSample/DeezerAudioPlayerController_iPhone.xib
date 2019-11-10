@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeezerAudioPlayerController">
+            <connections>
+                <outlet property="_albumName" destination="Rcc-I7-hlg" id="Kb5-Go-hS6"/>
+                <outlet property="_artistNameLabel" destination="6" id="17"/>
+                <outlet property="_coverImageView" destination="12" id="57i-kI-6DN"/>
+                <outlet property="_nameLabel" destination="13" id="16"/>
+                <outlet property="_nextButton" destination="lIY-mA-RaO" id="HFp-cs-g8Y"/>
+                <outlet property="_playButton" destination="26" id="29"/>
+                <outlet property="_previousButton" destination="ygb-53-b34" id="Ovw-Bm-n41"/>
+                <outlet property="_progressSliderView" destination="28" id="31"/>
+                <outlet property="_repeatButton" destination="9at-zr-Ad3" id="9Rt-pQ-NgU"/>
+                <outlet property="_shuffleButton" destination="fsm-vY-MxX" id="cc8-q9-xd1"/>
+                <outlet property="view" destination="1" id="14"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" placeholderIntrinsicWidth="85" placeholderIntrinsicHeight="85" translatesAutoresizingMaskIntoConstraints="NO" id="12">
+                    <rect key="frame" x="16" y="170" width="105.5" height="105.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="12" secondAttribute="height" multiplier="1:1" id="Pv1-ir-Jmc"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13">
+                    <rect key="frame" x="16" y="36" width="288" height="95.5"/>
+                    <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum at dolor ac volutpat. Nullam tincidunt tempor dui dignissim pharetra. Aliquam lobortis, orci eget efficitur facilisis, arcu leo congue tellus, at finibus mauris dolor sit amet orci. Aliquam ultricies ullamcorper condimentum. Proin a tempus tortor. Mauris libero quam, tempus vel dignissim non, posuere et justo. Integer nibh nulla, ultricies eu ullamcorper ut, maximus a ligula.
+
+</string>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6">
+                    <rect key="frame" x="129.5" y="219" width="174.5" height="41"/>
+                    <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum at dolor ac volutpat. Nullam tincidunt tempor dui dignissim pharetra. Aliquam lobortis, orci eget efficitur facilisis, arcu leo congue tellus, at finibus mauris dolor sit amet orci. Aliquam ultricies ullamcorper condimentum. Proin a tempus tortor. Mauris libero quam, tempus vel dignissim non, posuere et justo. Integer nibh nulla, ultricies eu ullamcorper ut, maximus a ligula.
+
+</string>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26" userLabel="Play Button">
+                    <rect key="frame" x="138" y="329.5" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="aJv-5l-eO1"/>
+                        <constraint firstAttribute="height" constant="44" id="m2n-GO-JZ2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                    <state key="normal" image="Player_Play_Normal">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" image="Player_Play_Highlighted.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onPlayButtonPushed:" destination="-1" eventType="touchUpInside" id="30"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIY-mA-RaO">
+                    <rect key="frame" x="206" y="329.5" width="30" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="ACc-VR-k4K"/>
+                        <constraint firstAttribute="height" constant="44" id="POT-Dx-gyl"/>
+                    </constraints>
+                    <state key="normal" image="Player_Next_Normal"/>
+                    <connections>
+                        <action selector="onNextButtonPushed:" destination="-1" eventType="touchUpInside" id="hvI-hF-Y3M"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcc-I7-hlg">
+                    <rect key="frame" x="129.5" y="170" width="174.5" height="41"/>
+                    <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum at dolor ac volutpat. Nullam tincidunt tempor dui dignissim pharetra. Aliquam lobortis, orci eget efficitur facilisis, arcu leo congue tellus, at finibus mauris dolor sit amet orci. Aliquam ultricies ullamcorper condimentum. Proin a tempus tortor. Mauris libero quam, tempus vel dignissim non, posuere et justo. Integer nibh nulla, ultricies eu ullamcorper ut, maximus a ligula.
+
+</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9at-zr-Ad3">
+                    <rect key="frame" x="16" y="389.5" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="3QW-rK-lxq"/>
+                        <constraint firstAttribute="height" constant="20" id="oVP-pY-8q5"/>
+                    </constraints>
+                    <state key="normal" image="Player_Repeat"/>
+                    <connections>
+                        <action selector="onRepeatButtonPushed:" destination="-1" eventType="touchUpInside" id="ZYb-ms-HdW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsm-vY-MxX">
+                    <rect key="frame" x="284" y="389.5" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="CNY-Vp-Frg"/>
+                        <constraint firstAttribute="height" constant="20" id="vhX-Vb-M7H"/>
+                    </constraints>
+                    <state key="normal" image="Player_Shuffle"/>
+                    <connections>
+                        <action selector="onShuffleButtonPushed:" destination="-1" eventType="touchUpInside" id="j1m-3D-gck"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="288" placeholderIntrinsicHeight="23" translatesAutoresizingMaskIntoConstraints="NO" id="28" customClass="PlayerAndBufferSlider">
+                    <rect key="frame" x="16" y="411.5" width="288" height="23"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygb-53-b34">
+                    <rect key="frame" x="84" y="329.5" width="30" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="CFi-Tv-Si4"/>
+                        <constraint firstAttribute="width" constant="30" id="OpE-Va-OJd"/>
+                    </constraints>
+                    <state key="normal" image="Player_Previous_Normal">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onPreviousButtonPushed:" destination="-1" eventType="touchUpInside" id="peD-8U-70h"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9at-zr-Ad3" firstAttribute="top" secondItem="26" secondAttribute="bottom" constant="16" id="2XQ-zV-GnY"/>
+                <constraint firstItem="26" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="2fn-uF-gXb"/>
+                <constraint firstItem="12" firstAttribute="leading" secondItem="7cc-iz-KUe" secondAttribute="leading" constant="16" id="3hx-YU-eLZ"/>
+                <constraint firstItem="7cc-iz-KUe" firstAttribute="trailing" secondItem="13" secondAttribute="trailing" constant="16" id="DYj-Nf-hor"/>
+                <constraint firstItem="7cc-iz-KUe" firstAttribute="trailing" secondItem="fsm-vY-MxX" secondAttribute="trailing" constant="16" id="DaG-5b-JnP"/>
+                <constraint firstItem="28" firstAttribute="top" secondItem="26" secondAttribute="bottom" constant="38" id="E2O-Uf-doI"/>
+                <constraint firstItem="Rcc-I7-hlg" firstAttribute="leading" secondItem="12" secondAttribute="trailing" constant="8" id="Ef9-Gk-bqk"/>
+                <constraint firstItem="6" firstAttribute="leading" secondItem="12" secondAttribute="trailing" constant="8" id="FMx-z1-pv5"/>
+                <constraint firstItem="28" firstAttribute="leading" secondItem="7cc-iz-KUe" secondAttribute="leading" constant="16" id="GWG-Eg-eKk"/>
+                <constraint firstItem="lIY-mA-RaO" firstAttribute="leading" secondItem="26" secondAttribute="trailing" constant="24" id="GgA-mW-H6H"/>
+                <constraint firstItem="6" firstAttribute="top" secondItem="Rcc-I7-hlg" secondAttribute="bottom" constant="8" id="RvN-lb-uGi"/>
+                <constraint firstItem="fsm-vY-MxX" firstAttribute="top" secondItem="26" secondAttribute="bottom" constant="16" id="UO8-SK-5PU"/>
+                <constraint firstItem="26" firstAttribute="centerY" secondItem="ygb-53-b34" secondAttribute="centerY" id="Uen-MJ-prM"/>
+                <constraint firstItem="Rcc-I7-hlg" firstAttribute="top" secondItem="12" secondAttribute="top" id="VeD-rh-DAg"/>
+                <constraint firstItem="7cc-iz-KUe" firstAttribute="trailing" secondItem="28" secondAttribute="trailing" constant="16" id="bJq-VH-Iuh"/>
+                <constraint firstItem="12" firstAttribute="width" secondItem="1" secondAttribute="width" multiplier="0.33" id="cpV-f7-qbL"/>
+                <constraint firstItem="9at-zr-Ad3" firstAttribute="leading" secondItem="7cc-iz-KUe" secondAttribute="leading" constant="16" id="crw-8C-HW6"/>
+                <constraint firstItem="7cc-iz-KUe" firstAttribute="trailing" secondItem="6" secondAttribute="trailing" constant="16" id="eDz-1t-Emq"/>
+                <constraint firstItem="26" firstAttribute="leading" secondItem="ygb-53-b34" secondAttribute="trailing" constant="24" id="eQu-1u-aTZ"/>
+                <constraint firstItem="12" firstAttribute="top" secondItem="1" secondAttribute="top" constant="170" id="gib-fA-tiB"/>
+                <constraint firstItem="13" firstAttribute="top" secondItem="7cc-iz-KUe" secondAttribute="top" constant="16" id="hGf-a3-Q2j"/>
+                <constraint firstItem="26" firstAttribute="top" secondItem="12" secondAttribute="bottom" constant="54" id="m9y-Jb-cMd"/>
+                <constraint firstItem="7cc-iz-KUe" firstAttribute="trailing" secondItem="Rcc-I7-hlg" secondAttribute="trailing" constant="16" id="muo-Y6-4yo"/>
+                <constraint firstItem="13" firstAttribute="leading" secondItem="7cc-iz-KUe" secondAttribute="leading" constant="16" id="oUy-a6-Y9R"/>
+                <constraint firstItem="lIY-mA-RaO" firstAttribute="centerY" secondItem="26" secondAttribute="centerY" id="x3P-iE-Elk"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="7cc-iz-KUe"/>
+            <point key="canvasLocation" x="52.799999999999997" y="48.575712143928037"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Player_Next_Normal" width="30" height="18"/>
+        <image name="Player_Play_Highlighted.png" width="32" height="34"/>
+        <image name="Player_Play_Normal" width="32" height="34"/>
+        <image name="Player_Previous_Normal" width="30" height="18"/>
+        <image name="Player_Repeat" width="16" height="16"/>
+        <image name="Player_Shuffle" width="16" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,1300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2407F4AB14F2893F0063ED1F /* DeezerAudioPlayerController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2407F4A914F2893F0063ED1F /* DeezerAudioPlayerController_iPad.xib */; };
+		2407F4AD14F289840063ED1F /* DeezerAudioPlayerController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2407F4AC14F289840063ED1F /* DeezerAudioPlayerController_iPhone.xib */; };
+		240ADDDC1525FD6C00C13049 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE7421C14F91F8D008E0632 /* AVFoundation.framework */; };
+		240B1AFA150F8E1400F3D9D4 /* DeezerItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B1AF8150F8E1400F3D9D4 /* DeezerItemViewController.m */; };
+		240B1AFB150F8E1400F3D9D4 /* DeezerItemViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240B1AF9150F8E1400F3D9D4 /* DeezerItemViewController_iPhone.xib */; };
+		240B1AFF150F8E4000F3D9D4 /* DeezerItemViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240B1AFE150F8E4000F3D9D4 /* DeezerItemViewController_iPad.xib */; };
+		2448793314F7F56600FBB256 /* DeezerSessionViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2448793214F7F56600FBB256 /* DeezerSessionViewController_iPhone.xib */; };
+		249B5D5E14C835B8003ED238 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249B5D5D14C835B8003ED238 /* UIKit.framework */; };
+		249B5D6014C835B8003ED238 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249B5D5F14C835B8003ED238 /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		249B5D6814C835B8003ED238 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 249B5D6614C835B8003ED238 /* InfoPlist.strings */; };
+		249B5D6A14C835B8003ED238 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 249B5D6914C835B8003ED238 /* main.m */; };
+		249B5D6E14C835B8003ED238 /* DeezerSampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 249B5D6D14C835B8003ED238 /* DeezerSampleAppDelegate.m */; };
+		249B5DAD14C8522C003ED238 /* DeezerSessionViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249B5DAB14C8522C003ED238 /* DeezerSessionViewController_iPad.xib */; };
+		249B5DCC14C87367003ED238 /* DeezerSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 249B5DCB14C87367003ED238 /* DeezerSession.m */; };
+		24C73D9014FE37B900ADEE6C /* DeezerSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C73D8E14FE37B900ADEE6C /* DeezerSearchViewController.xib */; };
+		5A29DA89180C0F89008216DC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A29DA88180C0F89008216DC /* Security.framework */; };
+		5A29DAB1180C5819008216DC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A29DAB0180C5819008216DC /* CFNetwork.framework */; };
+		5C05AEE614D3197B00319B5C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C05AEE514D3197A00319B5C /* SystemConfiguration.framework */; };
+		5C05AEFB14D946A700319B5C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C05AEFA14D946A700319B5C /* AudioToolbox.framework */; };
+		7DE7424114F954F6008E0632 /* PlayerAndBufferSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE7423F14F954F5008E0632 /* PlayerAndBufferSlider.m */; };
+		92385B131E685BE300B26005 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92385B121E685BE300B26005 /* LaunchScreen.storyboard */; };
+		B504828C195C60D5001B1587 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249B5D6114C835B8003ED238 /* CoreGraphics.framework */; };
+		B516628F19E6E12600E87219 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B516628D19E68D5D00E87219 /* MediaPlayer.framework */; };
+		B529D36519221BF30015AAF1 /* DeezerSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C73D8D14FE37B900ADEE6C /* DeezerSearchViewController.m */; };
+		B53683C4192638630027A8D7 /* MRErrorFormatter+Accounts.m in Sources */ = {isa = PBXBuildFile; fileRef = B536832C192638630027A8D7 /* MRErrorFormatter+Accounts.m */; };
+		B53683C5192638630027A8D7 /* MRErrorBuilder+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368330192638630027A8D7 /* MRErrorBuilder+Additions.m */; };
+		B53683C6192638630027A8D7 /* NSError+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368332192638630027A8D7 /* NSError+Additions.m */; };
+		B53683C7192638630027A8D7 /* MRErrorFormatter+Admob.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368336192638630027A8D7 /* MRErrorFormatter+Admob.m */; };
+		B53683C8192638630027A8D7 /* MRErrorBuilder+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B536833A192638630027A8D7 /* MRErrorBuilder+AFNetworking.m */; };
+		B53683C9192638630027A8D7 /* NSError+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B536833C192638630027A8D7 /* NSError+AFNetworking.m */; };
+		B53683CA192638630027A8D7 /* MRErrorBuilder+AVFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368340192638630027A8D7 /* MRErrorBuilder+AVFoundation.m */; };
+		B53683CB192638630027A8D7 /* MRErrorFormatter+AVFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368342192638630027A8D7 /* MRErrorFormatter+AVFoundation.m */; };
+		B53683CC192638630027A8D7 /* NSError+AVFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368344192638630027A8D7 /* NSError+AVFoundation.m */; };
+		B53683CD192638630027A8D7 /* ErrorKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5368346192638630027A8D7 /* ErrorKit.bundle */; };
+		B53683CE192638630027A8D7 /* MRAbstractRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = B536834B192638630027A8D7 /* MRAbstractRecoveryAttempter.m */; };
+		B53683CF192638630027A8D7 /* MRBlockRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = B536834D192638630027A8D7 /* MRBlockRecoveryAttempter.m */; };
+		B53683D0192638630027A8D7 /* MRChainedRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = B536834F192638630027A8D7 /* MRChainedRecoveryAttempter.m */; };
+		B53683D1192638630027A8D7 /* MRErrorBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368351192638630027A8D7 /* MRErrorBuilder.m */; };
+		B53683D2192638630027A8D7 /* MRErrorFormatter+ErrorCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368353192638630027A8D7 /* MRErrorFormatter+ErrorCode.m */; };
+		B53683D3192638630027A8D7 /* MRErrorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368355192638630027A8D7 /* MRErrorFormatter.m */; };
+		B53683D4192638630027A8D7 /* NSError+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368357192638630027A8D7 /* NSError+ErrorKit.m */; };
+		B53683D5192638630027A8D7 /* MRErrorBuilder+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = B536835B192638630027A8D7 /* MRErrorBuilder+CoreData.m */; };
+		B53683D6192638630027A8D7 /* MRErrorFormatter+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = B536835D192638630027A8D7 /* MRErrorFormatter+CoreData.m */; };
+		B53683D7192638630027A8D7 /* NSError+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = B536835F192638630027A8D7 /* NSError+CoreData.m */; };
+		B53683D8192638630027A8D7 /* MRErrorFormatter+CoreLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368363192638630027A8D7 /* MRErrorFormatter+CoreLocation.m */; };
+		B53683D9192638630027A8D7 /* MRErrorBuilder+FacebookSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = B536836B192638630027A8D7 /* MRErrorBuilder+FacebookSDK.m */; };
+		B53683DA192638630027A8D7 /* MRErrorFormatter+FacebookSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = B536836D192638630027A8D7 /* MRErrorFormatter+FacebookSDK.m */; };
+		B53683DB192638630027A8D7 /* NSError+FacebookSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = B536836F192638630027A8D7 /* NSError+FacebookSDK.m */; };
+		B53683DC192638630027A8D7 /* UIApplication+FacebookSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368371192638630027A8D7 /* UIApplication+FacebookSDK.m */; };
+		B53683DD192638630027A8D7 /* UIResponder+FacebookSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368373192638630027A8D7 /* UIResponder+FacebookSDK.m */; };
+		B53683DE192638630027A8D7 /* MRErrorBuilder+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368377192638630027A8D7 /* MRErrorBuilder+HTTP.m */; };
+		B53683DF192638630027A8D7 /* MRErrorFormatter+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368379192638630027A8D7 /* MRErrorFormatter+HTTP.m */; };
+		B53683E0192638630027A8D7 /* NSError+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = B536837B192638630027A8D7 /* NSError+HTTP.m */; };
+		B53683E1192638630027A8D7 /* MRErrorFormatter+iAD.m in Sources */ = {isa = PBXBuildFile; fileRef = B536837F192638630027A8D7 /* MRErrorFormatter+iAD.m */; };
+		B53683E2192638630027A8D7 /* MRErrorBuilder+JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368383192638630027A8D7 /* MRErrorBuilder+JSONKit.m */; };
+		B53683E3192638630027A8D7 /* NSError+JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368385192638630027A8D7 /* NSError+JSONKit.m */; };
+		B53683E4192638630027A8D7 /* MRErrorFormatter+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368389192638630027A8D7 /* MRErrorFormatter+JSONValues.m */; };
+		B53683E5192638630027A8D7 /* NSArray+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = B536838B192638630027A8D7 /* NSArray+JSONValues.m */; };
+		B53683E6192638630027A8D7 /* NSDictionary+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = B536838D192638630027A8D7 /* NSDictionary+JSONValues.m */; };
+		B53683E7192638630027A8D7 /* NSJSONSerialization+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = B536838F192638630027A8D7 /* NSJSONSerialization+JSONValues.m */; };
+		B53683E8192638630027A8D7 /* NSMutableArray+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368391192638630027A8D7 /* NSMutableArray+JSONValues.m */; };
+		B53683E9192638630027A8D7 /* NSMutableDictionary+JSONValues.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368393192638630027A8D7 /* NSMutableDictionary+JSONValues.m */; };
+		B53683EA192638630027A8D7 /* MRErrorFormatter+MapKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B5368397192638630027A8D7 /* MRErrorFormatter+MapKit.m */; };
+		B53683EB192638630027A8D7 /* MRErrorFormatter+MessageUI.m in Sources */ = {isa = PBXBuildFile; fileRef = B536839B192638630027A8D7 /* MRErrorFormatter+MessageUI.m */; };
+		B53683EC192638630027A8D7 /* MRErrorBuilder+NSException.m in Sources */ = {isa = PBXBuildFile; fileRef = B536839F192638630027A8D7 /* MRErrorBuilder+NSException.m */; };
+		B53683ED192638630027A8D7 /* MRErrorFormatter+NSException.m in Sources */ = {isa = PBXBuildFile; fileRef = B53683A1192638630027A8D7 /* MRErrorFormatter+NSException.m */; };
+		B53683EE192638630027A8D7 /* MRErrorBuilder+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = B53683A5192638630027A8D7 /* MRErrorBuilder+Parse.m */; };
+		B53683EF192638630027A8D7 /* MRErrorFormatter+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = B53683A7192638630027A8D7 /* MRErrorFormatter+Parse.m */; };
+		B53683F0192638630027A8D7 /* NSError+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = B53683A9192638630027A8D7 /* NSError+Parse.m */; };
+		B53683F1192638630027A8D7 /* MRErrorFormatter+Security.m in Sources */ = {isa = PBXBuildFile; fileRef = B53683AD192638630027A8D7 /* MRErrorFormatter+Security.m */; };
+		B53683F2192638630027A8D7 /* MRErrorFormatter+StoreKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B53683B1192638630027A8D7 /* MRErrorFormatter+StoreKit.m */; };
+		B53683F3192638630027A8D7 /* MRErrorFormatter+TransitionKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B53683B5192638630027A8D7 /* MRErrorFormatter+TransitionKit.m */; };
+		B53683F4192638630027A8D7 /* MRAlertRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = B53683B9192638630027A8D7 /* MRAlertRecoveryAttempter.m */; };
+		B53683F5192638630027A8D7 /* UIAlertView+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B53683BB192638630027A8D7 /* UIAlertView+ErrorKit.m */; };
+		B53683F6192638630027A8D7 /* UIApplication+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B53683BD192638630027A8D7 /* UIApplication+ErrorKit.m */; };
+		B53683F7192638630027A8D7 /* UIResponder+ErrorKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B53683BF192638630027A8D7 /* UIResponder+ErrorKit.m */; };
+		B53683F8192638630027A8D7 /* MRErrorFormatter+VeriJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = B53683C3192638630027A8D7 /* MRErrorFormatter+VeriJSON.m */; };
+		B53BF122191CDCF800E02A72 /* DeezerSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249B5DAA14C8522C003ED238 /* DeezerSessionViewController.m */; };
+		B53BF126191CE74500E02A72 /* DeezerObjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53BF125191CE74500E02A72 /* DeezerObjectListViewController.m */; };
+		B53BF128191CE82F00E02A72 /* DeezerObjectListViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53BF127191CE82F00E02A72 /* DeezerObjectListViewController_iPhone.xib */; };
+		B53BF12A191CE83E00E02A72 /* DeezerObjectListViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53BF129191CE83E00E02A72 /* DeezerObjectListViewController_iPad.xib */; };
+		B54D0D3219210C9200D2F384 /* DeezerCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54D0D3119210C9200D2F384 /* DeezerCommentViewController.m */; };
+		B54D0D3619210E9A00D2F384 /* DeezerCommentViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54D0D3519210E9A00D2F384 /* DeezerCommentViewController_iPhone.xib */; };
+		B54D0D3A19211D3200D2F384 /* DeezerRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54D0D3919211D3200D2F384 /* DeezerRateViewController.m */; };
+		B54D0D3C19211D6600D2F384 /* DeezerRateViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54D0D3B19211D6600D2F384 /* DeezerRateViewController_iPhone.xib */; };
+		B54D0D3E192121F700D2F384 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54D0D3D192121F700D2F384 /* QuartzCore.framework */; };
+		B59CBC7C19460F6100EABBBC /* DeezerAudioPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2407F4A814F2893F0063ED1F /* DeezerAudioPlayerController.m */; };
+		B5A4AAC019655B0600F2B196 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A4AABF19655B0600F2B196 /* Images.xcassets */; };
+		B5BDF40419227E0900B010DC /* DeezerInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BDF40319227E0900B010DC /* DeezerInputViewController.m */; };
+		B5CD8C7A1965487000E944FA /* DZRResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5CD8C791965487000E944FA /* DZRResources.bundle */; };
+		BEE5DA3F1FE1A0A500D475BB /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE5DA3E1FE1A0A500D475BB /* libicucore.tbd */; };
+		D57D51C61E1FF38400B439BB /* UIAlertController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = D57D51C51E1FF38400B439BB /* UIAlertController+Utils.m */; };
+		D57D51C91E1FF3A000B439BB /* NSDictionary+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = D57D51C81E1FF3A000B439BB /* NSDictionary+Utils.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2407F4A714F2893F0063ED1F /* DeezerAudioPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeezerAudioPlayerController.h; sourceTree = "<group>"; };
+		2407F4A814F2893F0063ED1F /* DeezerAudioPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeezerAudioPlayerController.m; sourceTree = "<group>"; };
+		2407F4A914F2893F0063ED1F /* DeezerAudioPlayerController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeezerAudioPlayerController_iPad.xib; sourceTree = "<group>"; };
+		2407F4AC14F289840063ED1F /* DeezerAudioPlayerController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeezerAudioPlayerController_iPhone.xib; sourceTree = "<group>"; };
+		240B1AF7150F8E1400F3D9D4 /* DeezerItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeezerItemViewController.h; sourceTree = "<group>"; };
+		240B1AF8150F8E1400F3D9D4 /* DeezerItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeezerItemViewController.m; sourceTree = "<group>"; };
+		240B1AF9150F8E1400F3D9D4 /* DeezerItemViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeezerItemViewController_iPhone.xib; sourceTree = "<group>"; };
+		240B1AFE150F8E4000F3D9D4 /* DeezerItemViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeezerItemViewController_iPad.xib; sourceTree = "<group>"; };
+		2448793214F7F56600FBB256 /* DeezerSessionViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeezerSessionViewController_iPhone.xib; sourceTree = "<group>"; };
+		249B5D5914C835B8003ED238 /* DeezerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeezerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		249B5D5D14C835B8003ED238 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		249B5D5F14C835B8003ED238 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		249B5D6114C835B8003ED238 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		249B5D6514C835B8003ED238 /* DeezerSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DeezerSample-Info.plist"; sourceTree = "<group>"; };
+		249B5D6714C835B8003ED238 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		249B5D6914C835B8003ED238 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		249B5D6B14C835B8003ED238 /* DeezerSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DeezerSample-Prefix.pch"; sourceTree = "<group>"; };
+		249B5D6C14C835B8003ED238 /* DeezerSampleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeezerSampleAppDelegate.h; sourceTree = "<group>"; };
+		249B5D6D14C835B8003ED238 /* DeezerSampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeezerSampleAppDelegate.m; sourceTree = "<group>"; };
+		249B5DA914C8522C003ED238 /* DeezerSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeezerSessionViewController.h; sourceTree = "<group>"; };
+		249B5DAA14C8522C003ED238 /* DeezerSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeezerSessionViewController.m; sourceTree = "<group>"; };
+		249B5DAB14C8522C003ED238 /* DeezerSessionViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeezerSessionViewController_iPad.xib; sourceTree = "<group>"; };
+		249B5DCA14C87366003ED238 /* DeezerSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeezerSession.h; sourceTree = "<group>"; };
+		249B5DCB14C87367003ED238 /* DeezerSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeezerSession.m; sourceTree = "<group>"; };
+		24C73D8C14FE37B900ADEE6C /* DeezerSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeezerSearchViewController.h; sourceTree = "<group>"; };
+		24C73D8D14FE37B900ADEE6C /* DeezerSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeezerSearchViewController.m; sourceTree = "<group>"; };
+		24C73D8E14FE37B900ADEE6C /* DeezerSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeezerSearchViewController.xib; sourceTree = "<group>"; };
+		5A29DA88180C0F89008216DC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		5A29DAB0180C5819008216DC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5C05AEE514D3197A00319B5C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5C05AEFA14D946A700319B5C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7DE7421C14F91F8D008E0632 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7DE7423F14F954F5008E0632 /* PlayerAndBufferSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerAndBufferSlider.m; sourceTree = "<group>"; };
+		7DE7424014F954F6008E0632 /* PlayerAndBufferSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerAndBufferSlider.h; sourceTree = "<group>"; };
+		92385B121E685BE300B26005 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B516628D19E68D5D00E87219 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		B528CD3C198A854000F3F4BD /* deezer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = deezer.xcconfig; sourceTree = "<group>"; };
+		B536832A192638630027A8D7 /* ErrorKit_Accounts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_Accounts.h; sourceTree = "<group>"; };
+		B536832B192638630027A8D7 /* MRErrorFormatter+Accounts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+Accounts.h"; sourceTree = "<group>"; };
+		B536832C192638630027A8D7 /* MRErrorFormatter+Accounts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+Accounts.m"; sourceTree = "<group>"; };
+		B536832E192638630027A8D7 /* ErrorKit_Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_Additions.h; sourceTree = "<group>"; };
+		B536832F192638630027A8D7 /* MRErrorBuilder+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorBuilder+Additions.h"; sourceTree = "<group>"; };
+		B5368330192638630027A8D7 /* MRErrorBuilder+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorBuilder+Additions.m"; sourceTree = "<group>"; };
+		B5368331192638630027A8D7 /* NSError+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Additions.h"; sourceTree = "<group>"; };
+		B5368332192638630027A8D7 /* NSError+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Additions.m"; sourceTree = "<group>"; };
+		B5368334192638630027A8D7 /* ErrorKit_Admob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_Admob.h; sourceTree = "<group>"; };
+		B5368335192638630027A8D7 /* MRErrorFormatter+Admob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+Admob.h"; sourceTree = "<group>"; };
+		B5368336192638630027A8D7 /* MRErrorFormatter+Admob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+Admob.m"; sourceTree = "<group>"; };
+		B5368338192638630027A8D7 /* ErrorKit_AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_AFNetworking.h; sourceTree = "<group>"; };
+		B5368339192638630027A8D7 /* MRErrorBuilder+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorBuilder+AFNetworking.h"; sourceTree = "<group>"; };
+		B536833A192638630027A8D7 /* MRErrorBuilder+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorBuilder+AFNetworking.m"; sourceTree = "<group>"; };
+		B536833B192638630027A8D7 /* NSError+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+AFNetworking.h"; sourceTree = "<group>"; };
+		B536833C192638630027A8D7 /* NSError+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+AFNetworking.m"; sourceTree = "<group>"; };
+		B536833E192638630027A8D7 /* ErrorKit_AVFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_AVFoundation.h; sourceTree = "<group>"; };
+		B536833F192638630027A8D7 /* MRErrorBuilder+AVFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorBuilder+AVFoundation.h"; sourceTree = "<group>"; };
+		B5368340192638630027A8D7 /* MRErrorBuilder+AVFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorBuilder+AVFoundation.m"; sourceTree = "<group>"; };
+		B5368341192638630027A8D7 /* MRErrorFormatter+AVFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+AVFoundation.h"; sourceTree = "<group>"; };
+		B5368342192638630027A8D7 /* MRErrorFormatter+AVFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+AVFoundation.m"; sourceTree = "<group>"; };
+		B5368343192638630027A8D7 /* NSError+AVFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+AVFoundation.h"; sourceTree = "<group>"; };
+		B5368344192638630027A8D7 /* NSError+AVFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+AVFoundation.m"; sourceTree = "<group>"; };
+		B5368346192638630027A8D7 /* ErrorKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ErrorKit.bundle; sourceTree = "<group>"; };
+		B5368347192638630027A8D7 /* ErrorKit_Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_Core.h; sourceTree = "<group>"; };
+		B5368348192638630027A8D7 /* ErrorKitImports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKitImports.h; sourceTree = "<group>"; };
+		B5368349192638630027A8D7 /* ErrorKitMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKitMacros.h; sourceTree = "<group>"; };
+		B536834A192638630027A8D7 /* MRAbstractRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRAbstractRecoveryAttempter.h; sourceTree = "<group>"; };
+		B536834B192638630027A8D7 /* MRAbstractRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRAbstractRecoveryAttempter.m; sourceTree = "<group>"; };
+		B536834C192638630027A8D7 /* MRBlockRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRBlockRecoveryAttempter.h; sourceTree = "<group>"; };
+		B536834D192638630027A8D7 /* MRBlockRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRBlockRecoveryAttempter.m; sourceTree = "<group>"; };
+		B536834E192638630027A8D7 /* MRChainedRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRChainedRecoveryAttempter.h; sourceTree = "<group>"; };
+		B536834F192638630027A8D7 /* MRChainedRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRChainedRecoveryAttempter.m; sourceTree = "<group>"; };
+		B5368350192638630027A8D7 /* MRErrorBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRErrorBuilder.h; sourceTree = "<group>"; };
+		B5368351192638630027A8D7 /* MRErrorBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRErrorBuilder.m; sourceTree = "<group>"; };
+		B5368352192638630027A8D7 /* MRErrorFormatter+ErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+ErrorCode.h"; sourceTree = "<group>"; };
+		B5368353192638630027A8D7 /* MRErrorFormatter+ErrorCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+ErrorCode.m"; sourceTree = "<group>"; };
+		B5368354192638630027A8D7 /* MRErrorFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRErrorFormatter.h; sourceTree = "<group>"; };
+		B5368355192638630027A8D7 /* MRErrorFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRErrorFormatter.m; sourceTree = "<group>"; };
+		B5368356192638630027A8D7 /* NSError+ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+ErrorKit.h"; sourceTree = "<group>"; };
+		B5368357192638630027A8D7 /* NSError+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+ErrorKit.m"; sourceTree = "<group>"; };
+		B5368359192638630027A8D7 /* ErrorKit_CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_CoreData.h; sourceTree = "<group>"; };
+		B536835A192638630027A8D7 /* MRErrorBuilder+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorBuilder+CoreData.h"; sourceTree = "<group>"; };
+		B536835B192638630027A8D7 /* MRErrorBuilder+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorBuilder+CoreData.m"; sourceTree = "<group>"; };
+		B536835C192638630027A8D7 /* MRErrorFormatter+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+CoreData.h"; sourceTree = "<group>"; };
+		B536835D192638630027A8D7 /* MRErrorFormatter+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+CoreData.m"; sourceTree = "<group>"; };
+		B536835E192638630027A8D7 /* NSError+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+CoreData.h"; sourceTree = "<group>"; };
+		B536835F192638630027A8D7 /* NSError+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+CoreData.m"; sourceTree = "<group>"; };
+		B5368361192638630027A8D7 /* ErrorKit_CoreLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_CoreLocation.h; sourceTree = "<group>"; };
+		B5368362192638630027A8D7 /* MRErrorFormatter+CoreLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+CoreLocation.h"; sourceTree = "<group>"; };
+		B5368363192638630027A8D7 /* MRErrorFormatter+CoreLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+CoreLocation.m"; sourceTree = "<group>"; };
+		B5368365192638630027A8D7 /* ErrorKit_Default.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_Default.h; sourceTree = "<group>"; };
+		B5368366192638630027A8D7 /* ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit.h; sourceTree = "<group>"; };
+		B5368367192638630027A8D7 /* ErrorKitDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKitDefines.h; sourceTree = "<group>"; };
+		B5368369192638630027A8D7 /* ErrorKit_FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_FacebookSDK.h; sourceTree = "<group>"; };
+		B536836A192638630027A8D7 /* MRErrorBuilder+FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorBuilder+FacebookSDK.h"; sourceTree = "<group>"; };
+		B536836B192638630027A8D7 /* MRErrorBuilder+FacebookSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorBuilder+FacebookSDK.m"; sourceTree = "<group>"; };
+		B536836C192638630027A8D7 /* MRErrorFormatter+FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+FacebookSDK.h"; sourceTree = "<group>"; };
+		B536836D192638630027A8D7 /* MRErrorFormatter+FacebookSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+FacebookSDK.m"; sourceTree = "<group>"; };
+		B536836E192638630027A8D7 /* NSError+FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+FacebookSDK.h"; sourceTree = "<group>"; };
+		B536836F192638630027A8D7 /* NSError+FacebookSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+FacebookSDK.m"; sourceTree = "<group>"; };
+		B5368370192638630027A8D7 /* UIApplication+FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+FacebookSDK.h"; sourceTree = "<group>"; };
+		B5368371192638630027A8D7 /* UIApplication+FacebookSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+FacebookSDK.m"; sourceTree = "<group>"; };
+		B5368372192638630027A8D7 /* UIResponder+FacebookSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+FacebookSDK.h"; sourceTree = "<group>"; };
+		B5368373192638630027A8D7 /* UIResponder+FacebookSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+FacebookSDK.m"; sourceTree = "<group>"; };
+		B5368375192638630027A8D7 /* ErrorKit_HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_HTTP.h; sourceTree = "<group>"; };
+		B5368376192638630027A8D7 /* MRErrorBuilder+HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorBuilder+HTTP.h"; sourceTree = "<group>"; };
+		B5368377192638630027A8D7 /* MRErrorBuilder+HTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorBuilder+HTTP.m"; sourceTree = "<group>"; };
+		B5368378192638630027A8D7 /* MRErrorFormatter+HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+HTTP.h"; sourceTree = "<group>"; };
+		B5368379192638630027A8D7 /* MRErrorFormatter+HTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+HTTP.m"; sourceTree = "<group>"; };
+		B536837A192638630027A8D7 /* NSError+HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+HTTP.h"; sourceTree = "<group>"; };
+		B536837B192638630027A8D7 /* NSError+HTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+HTTP.m"; sourceTree = "<group>"; };
+		B536837D192638630027A8D7 /* ErrorKit_iAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_iAD.h; sourceTree = "<group>"; };
+		B536837E192638630027A8D7 /* MRErrorFormatter+iAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+iAD.h"; sourceTree = "<group>"; };
+		B536837F192638630027A8D7 /* MRErrorFormatter+iAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+iAD.m"; sourceTree = "<group>"; };
+		B5368381192638630027A8D7 /* ErrorKit_JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_JSONKit.h; sourceTree = "<group>"; };
+		B5368382192638630027A8D7 /* MRErrorBuilder+JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorBuilder+JSONKit.h"; sourceTree = "<group>"; };
+		B5368383192638630027A8D7 /* MRErrorBuilder+JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorBuilder+JSONKit.m"; sourceTree = "<group>"; };
+		B5368384192638630027A8D7 /* NSError+JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+JSONKit.h"; sourceTree = "<group>"; };
+		B5368385192638630027A8D7 /* NSError+JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+JSONKit.m"; sourceTree = "<group>"; };
+		B5368387192638630027A8D7 /* ErrorKit_JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_JSONValues.h; sourceTree = "<group>"; };
+		B5368388192638630027A8D7 /* MRErrorFormatter+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+JSONValues.h"; sourceTree = "<group>"; };
+		B5368389192638630027A8D7 /* MRErrorFormatter+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+JSONValues.m"; sourceTree = "<group>"; };
+		B536838A192638630027A8D7 /* NSArray+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JSONValues.h"; sourceTree = "<group>"; };
+		B536838B192638630027A8D7 /* NSArray+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JSONValues.m"; sourceTree = "<group>"; };
+		B536838C192638630027A8D7 /* NSDictionary+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONValues.h"; sourceTree = "<group>"; };
+		B536838D192638630027A8D7 /* NSDictionary+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONValues.m"; sourceTree = "<group>"; };
+		B536838E192638630027A8D7 /* NSJSONSerialization+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+JSONValues.h"; sourceTree = "<group>"; };
+		B536838F192638630027A8D7 /* NSJSONSerialization+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+JSONValues.m"; sourceTree = "<group>"; };
+		B5368390192638630027A8D7 /* NSMutableArray+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+JSONValues.h"; sourceTree = "<group>"; };
+		B5368391192638630027A8D7 /* NSMutableArray+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+JSONValues.m"; sourceTree = "<group>"; };
+		B5368392192638630027A8D7 /* NSMutableDictionary+JSONValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+JSONValues.h"; sourceTree = "<group>"; };
+		B5368393192638630027A8D7 /* NSMutableDictionary+JSONValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+JSONValues.m"; sourceTree = "<group>"; };
+		B5368395192638630027A8D7 /* ErrorKit_MapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_MapKit.h; sourceTree = "<group>"; };
+		B5368396192638630027A8D7 /* MRErrorFormatter+MapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+MapKit.h"; sourceTree = "<group>"; };
+		B5368397192638630027A8D7 /* MRErrorFormatter+MapKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+MapKit.m"; sourceTree = "<group>"; };
+		B5368399192638630027A8D7 /* ErrorKit_MessageUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_MessageUI.h; sourceTree = "<group>"; };
+		B536839A192638630027A8D7 /* MRErrorFormatter+MessageUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+MessageUI.h"; sourceTree = "<group>"; };
+		B536839B192638630027A8D7 /* MRErrorFormatter+MessageUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+MessageUI.m"; sourceTree = "<group>"; };
+		B536839D192638630027A8D7 /* ErrorKit_NSException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_NSException.h; sourceTree = "<group>"; };
+		B536839E192638630027A8D7 /* MRErrorBuilder+NSException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorBuilder+NSException.h"; sourceTree = "<group>"; };
+		B536839F192638630027A8D7 /* MRErrorBuilder+NSException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorBuilder+NSException.m"; sourceTree = "<group>"; };
+		B53683A0192638630027A8D7 /* MRErrorFormatter+NSException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+NSException.h"; sourceTree = "<group>"; };
+		B53683A1192638630027A8D7 /* MRErrorFormatter+NSException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+NSException.m"; sourceTree = "<group>"; };
+		B53683A3192638630027A8D7 /* ErrorKit_Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_Parse.h; sourceTree = "<group>"; };
+		B53683A4192638630027A8D7 /* MRErrorBuilder+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorBuilder+Parse.h"; sourceTree = "<group>"; };
+		B53683A5192638630027A8D7 /* MRErrorBuilder+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorBuilder+Parse.m"; sourceTree = "<group>"; };
+		B53683A6192638630027A8D7 /* MRErrorFormatter+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+Parse.h"; sourceTree = "<group>"; };
+		B53683A7192638630027A8D7 /* MRErrorFormatter+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+Parse.m"; sourceTree = "<group>"; };
+		B53683A8192638630027A8D7 /* NSError+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Parse.h"; sourceTree = "<group>"; };
+		B53683A9192638630027A8D7 /* NSError+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Parse.m"; sourceTree = "<group>"; };
+		B53683AB192638630027A8D7 /* ErrorKit_Security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_Security.h; sourceTree = "<group>"; };
+		B53683AC192638630027A8D7 /* MRErrorFormatter+Security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+Security.h"; sourceTree = "<group>"; };
+		B53683AD192638630027A8D7 /* MRErrorFormatter+Security.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+Security.m"; sourceTree = "<group>"; };
+		B53683AF192638630027A8D7 /* ErrorKit_StoreKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_StoreKit.h; sourceTree = "<group>"; };
+		B53683B0192638630027A8D7 /* MRErrorFormatter+StoreKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+StoreKit.h"; sourceTree = "<group>"; };
+		B53683B1192638630027A8D7 /* MRErrorFormatter+StoreKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+StoreKit.m"; sourceTree = "<group>"; };
+		B53683B3192638630027A8D7 /* ErrorKit_TransitionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_TransitionKit.h; sourceTree = "<group>"; };
+		B53683B4192638630027A8D7 /* MRErrorFormatter+TransitionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+TransitionKit.h"; sourceTree = "<group>"; };
+		B53683B5192638630027A8D7 /* MRErrorFormatter+TransitionKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+TransitionKit.m"; sourceTree = "<group>"; };
+		B53683B7192638630027A8D7 /* ErrorKit_UIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_UIKit.h; sourceTree = "<group>"; };
+		B53683B8192638630027A8D7 /* MRAlertRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRAlertRecoveryAttempter.h; sourceTree = "<group>"; };
+		B53683B9192638630027A8D7 /* MRAlertRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRAlertRecoveryAttempter.m; sourceTree = "<group>"; };
+		B53683BA192638630027A8D7 /* UIAlertView+ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+ErrorKit.h"; sourceTree = "<group>"; };
+		B53683BB192638630027A8D7 /* UIAlertView+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+ErrorKit.m"; sourceTree = "<group>"; };
+		B53683BC192638630027A8D7 /* UIApplication+ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+ErrorKit.h"; sourceTree = "<group>"; };
+		B53683BD192638630027A8D7 /* UIApplication+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+ErrorKit.m"; sourceTree = "<group>"; };
+		B53683BE192638630027A8D7 /* UIResponder+ErrorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+ErrorKit.h"; sourceTree = "<group>"; };
+		B53683BF192638630027A8D7 /* UIResponder+ErrorKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+ErrorKit.m"; sourceTree = "<group>"; };
+		B53683C1192638630027A8D7 /* ErrorKit_VeriJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorKit_VeriJSON.h; sourceTree = "<group>"; };
+		B53683C2192638630027A8D7 /* MRErrorFormatter+VeriJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MRErrorFormatter+VeriJSON.h"; sourceTree = "<group>"; };
+		B53683C3192638630027A8D7 /* MRErrorFormatter+VeriJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRErrorFormatter+VeriJSON.m"; sourceTree = "<group>"; };
+		B53BF124191CE74500E02A72 /* DeezerObjectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeezerObjectListViewController.h; sourceTree = "<group>"; };
+		B53BF125191CE74500E02A72 /* DeezerObjectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeezerObjectListViewController.m; sourceTree = "<group>"; };
+		B53BF127191CE82F00E02A72 /* DeezerObjectListViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeezerObjectListViewController_iPhone.xib; sourceTree = "<group>"; };
+		B53BF129191CE83E00E02A72 /* DeezerObjectListViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeezerObjectListViewController_iPad.xib; sourceTree = "<group>"; };
+		B54D0D3019210C9200D2F384 /* DeezerCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeezerCommentViewController.h; sourceTree = "<group>"; };
+		B54D0D3119210C9200D2F384 /* DeezerCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeezerCommentViewController.m; sourceTree = "<group>"; };
+		B54D0D3519210E9A00D2F384 /* DeezerCommentViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeezerCommentViewController_iPhone.xib; sourceTree = "<group>"; };
+		B54D0D3819211D3200D2F384 /* DeezerRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeezerRateViewController.h; sourceTree = "<group>"; };
+		B54D0D3919211D3200D2F384 /* DeezerRateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeezerRateViewController.m; sourceTree = "<group>"; };
+		B54D0D3B19211D6600D2F384 /* DeezerRateViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeezerRateViewController_iPhone.xib; sourceTree = "<group>"; };
+		B54D0D3D192121F700D2F384 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B5A4AABF19655B0600F2B196 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B5BDF40219227E0900B010DC /* DeezerInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeezerInputViewController.h; sourceTree = "<group>"; };
+		B5BDF40319227E0900B010DC /* DeezerInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeezerInputViewController.m; sourceTree = "<group>"; };
+		B5CD8C791965487000E944FA /* DZRResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DZRResources.bundle; path = ../DeezerSDK/DZRResources.bundle; sourceTree = "<group>"; };
+		BEE5DA3E1FE1A0A500D475BB /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		D57D51C41E1FF38400B439BB /* UIAlertController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Utils.h"; sourceTree = "<group>"; };
+		D57D51C51E1FF38400B439BB /* UIAlertController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Utils.m"; sourceTree = "<group>"; };
+		D57D51C71E1FF3A000B439BB /* NSDictionary+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Utils.h"; sourceTree = "<group>"; };
+		D57D51C81E1FF3A000B439BB /* NSDictionary+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Utils.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		249B5D5614C835B8003ED238 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				249B5D6014C835B8003ED238 /* Foundation.framework in Frameworks */,
+				B504828C195C60D5001B1587 /* CoreGraphics.framework in Frameworks */,
+				B54D0D3E192121F700D2F384 /* QuartzCore.framework in Frameworks */,
+				5A29DA89180C0F89008216DC /* Security.framework in Frameworks */,
+				5A29DAB1180C5819008216DC /* CFNetwork.framework in Frameworks */,
+				240ADDDC1525FD6C00C13049 /* AVFoundation.framework in Frameworks */,
+				BEE5DA3F1FE1A0A500D475BB /* libicucore.tbd in Frameworks */,
+				5C05AEFB14D946A700319B5C /* AudioToolbox.framework in Frameworks */,
+				5C05AEE614D3197B00319B5C /* SystemConfiguration.framework in Frameworks */,
+				249B5D5E14C835B8003ED238 /* UIKit.framework in Frameworks */,
+				B516628F19E6E12600E87219 /* MediaPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2407F4A614F2890E0063ED1F /* DeezerAudioPlayerController */ = {
+			isa = PBXGroup;
+			children = (
+				2407F4A714F2893F0063ED1F /* DeezerAudioPlayerController.h */,
+				2407F4A814F2893F0063ED1F /* DeezerAudioPlayerController.m */,
+				2407F4AC14F289840063ED1F /* DeezerAudioPlayerController_iPhone.xib */,
+				2407F4A914F2893F0063ED1F /* DeezerAudioPlayerController_iPad.xib */,
+			);
+			name = DeezerAudioPlayerController;
+			sourceTree = "<group>";
+		};
+		240968CC1529AC1F009C7EC9 /* ThridParty */ = {
+			isa = PBXGroup;
+			children = (
+				B5368328192638630027A8D7 /* ErrorKit */,
+			);
+			name = ThridParty;
+			sourceTree = "<group>";
+		};
+		240B1AF5150F8DF800F3D9D4 /* DeezerItemViewController */ = {
+			isa = PBXGroup;
+			children = (
+				240B1AF7150F8E1400F3D9D4 /* DeezerItemViewController.h */,
+				240B1AF8150F8E1400F3D9D4 /* DeezerItemViewController.m */,
+				240B1AF9150F8E1400F3D9D4 /* DeezerItemViewController_iPhone.xib */,
+				240B1AFE150F8E4000F3D9D4 /* DeezerItemViewController_iPad.xib */,
+			);
+			name = DeezerItemViewController;
+			sourceTree = "<group>";
+		};
+		249B5D4E14C835B8003ED238 = {
+			isa = PBXGroup;
+			children = (
+				B528CD3C198A854000F3F4BD /* deezer.xcconfig */,
+				B5CD8C791965487000E944FA /* DZRResources.bundle */,
+				249B5D6314C835B8003ED238 /* DeezerSample */,
+				249B5D5C14C835B8003ED238 /* Frameworks */,
+				249B5D5A14C835B8003ED238 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		249B5D5A14C835B8003ED238 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				249B5D5914C835B8003ED238 /* DeezerSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		249B5D5C14C835B8003ED238 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEE5DA3E1FE1A0A500D475BB /* libicucore.tbd */,
+				B516628D19E68D5D00E87219 /* MediaPlayer.framework */,
+				B54D0D3D192121F700D2F384 /* QuartzCore.framework */,
+				5A29DAB0180C5819008216DC /* CFNetwork.framework */,
+				5A29DA88180C0F89008216DC /* Security.framework */,
+				7DE7421C14F91F8D008E0632 /* AVFoundation.framework */,
+				5C05AEFA14D946A700319B5C /* AudioToolbox.framework */,
+				5C05AEE514D3197A00319B5C /* SystemConfiguration.framework */,
+				249B5D5D14C835B8003ED238 /* UIKit.framework */,
+				249B5D5F14C835B8003ED238 /* Foundation.framework */,
+				249B5D6114C835B8003ED238 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		249B5D6314C835B8003ED238 /* DeezerSample */ = {
+			isa = PBXGroup;
+			children = (
+				249B5D6C14C835B8003ED238 /* DeezerSampleAppDelegate.h */,
+				249B5D6D14C835B8003ED238 /* DeezerSampleAppDelegate.m */,
+				249B5DCA14C87366003ED238 /* DeezerSession.h */,
+				249B5DCB14C87367003ED238 /* DeezerSession.m */,
+				7DE7424014F954F6008E0632 /* PlayerAndBufferSlider.h */,
+				7DE7423F14F954F5008E0632 /* PlayerAndBufferSlider.m */,
+				D57D51BC1E1FF19D00B439BB /* Utils */,
+				249B5DA814C851FD003ED238 /* ViewControllers */,
+				240968CC1529AC1F009C7EC9 /* ThridParty */,
+				B5A4AABF19655B0600F2B196 /* Images.xcassets */,
+				249B5D6414C835B8003ED238 /* Supporting Files */,
+				92385B121E685BE300B26005 /* LaunchScreen.storyboard */,
+			);
+			path = DeezerSample;
+			sourceTree = "<group>";
+		};
+		249B5D6414C835B8003ED238 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				249B5D6514C835B8003ED238 /* DeezerSample-Info.plist */,
+				249B5D6614C835B8003ED238 /* InfoPlist.strings */,
+				249B5D6914C835B8003ED238 /* main.m */,
+				249B5D6B14C835B8003ED238 /* DeezerSample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		249B5DA814C851FD003ED238 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2407F4A614F2890E0063ED1F /* DeezerAudioPlayerController */,
+				B54D0D2F19210C6000D2F384 /* DeezerCommentViewController */,
+				B5BDF40119227DD800B010DC /* DeezerInputViewController */,
+				240B1AF5150F8DF800F3D9D4 /* DeezerItemViewController */,
+				B53BF123191CE6D800E02A72 /* DeezerObjectListViewController */,
+				B54D0D3719211D1000D2F384 /* DeezerRateViewController */,
+				24C73D8314FE374600ADEE6C /* DeezerSearchViewController */,
+				24FB8ABD14EA662700A6D4BB /* DeezerSessionViewController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		24C73D8314FE374600ADEE6C /* DeezerSearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				24C73D8C14FE37B900ADEE6C /* DeezerSearchViewController.h */,
+				24C73D8D14FE37B900ADEE6C /* DeezerSearchViewController.m */,
+				24C73D8E14FE37B900ADEE6C /* DeezerSearchViewController.xib */,
+			);
+			name = DeezerSearchViewController;
+			sourceTree = "<group>";
+		};
+		24FB8ABD14EA662700A6D4BB /* DeezerSessionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				249B5DA914C8522C003ED238 /* DeezerSessionViewController.h */,
+				249B5DAA14C8522C003ED238 /* DeezerSessionViewController.m */,
+				2448793214F7F56600FBB256 /* DeezerSessionViewController_iPhone.xib */,
+				249B5DAB14C8522C003ED238 /* DeezerSessionViewController_iPad.xib */,
+			);
+			name = DeezerSessionViewController;
+			sourceTree = "<group>";
+		};
+		B5368328192638630027A8D7 /* ErrorKit */ = {
+			isa = PBXGroup;
+			children = (
+				B5368329192638630027A8D7 /* Accounts */,
+				B536832D192638630027A8D7 /* Additions */,
+				B5368333192638630027A8D7 /* Admob */,
+				B5368337192638630027A8D7 /* AFNetworking */,
+				B536833D192638630027A8D7 /* AVFoundation */,
+				B5368345192638630027A8D7 /* Core */,
+				B5368358192638630027A8D7 /* CoreData */,
+				B5368360192638630027A8D7 /* CoreLocation */,
+				B5368364192638630027A8D7 /* Default */,
+				B5368366192638630027A8D7 /* ErrorKit.h */,
+				B5368367192638630027A8D7 /* ErrorKitDefines.h */,
+				B5368368192638630027A8D7 /* FacebookSDK */,
+				B5368374192638630027A8D7 /* HTTP */,
+				B536837C192638630027A8D7 /* iAD */,
+				B5368380192638630027A8D7 /* JSONKit */,
+				B5368386192638630027A8D7 /* JSONValues */,
+				B5368394192638630027A8D7 /* MapKit */,
+				B5368398192638630027A8D7 /* MessageUI */,
+				B536839C192638630027A8D7 /* NSException */,
+				B53683A2192638630027A8D7 /* Parse */,
+				B53683AA192638630027A8D7 /* Security */,
+				B53683AE192638630027A8D7 /* StoreKit */,
+				B53683B2192638630027A8D7 /* TransitionKit */,
+				B53683B6192638630027A8D7 /* UIKit */,
+				B53683C0192638630027A8D7 /* VeriJSON */,
+			);
+			name = ErrorKit;
+			path = ../ErrorKit;
+			sourceTree = "<group>";
+		};
+		B5368329192638630027A8D7 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				B536832A192638630027A8D7 /* ErrorKit_Accounts.h */,
+				B536832B192638630027A8D7 /* MRErrorFormatter+Accounts.h */,
+				B536832C192638630027A8D7 /* MRErrorFormatter+Accounts.m */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		B536832D192638630027A8D7 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				B536832E192638630027A8D7 /* ErrorKit_Additions.h */,
+				B536832F192638630027A8D7 /* MRErrorBuilder+Additions.h */,
+				B5368330192638630027A8D7 /* MRErrorBuilder+Additions.m */,
+				B5368331192638630027A8D7 /* NSError+Additions.h */,
+				B5368332192638630027A8D7 /* NSError+Additions.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		B5368333192638630027A8D7 /* Admob */ = {
+			isa = PBXGroup;
+			children = (
+				B5368334192638630027A8D7 /* ErrorKit_Admob.h */,
+				B5368335192638630027A8D7 /* MRErrorFormatter+Admob.h */,
+				B5368336192638630027A8D7 /* MRErrorFormatter+Admob.m */,
+			);
+			path = Admob;
+			sourceTree = "<group>";
+		};
+		B5368337192638630027A8D7 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				B5368338192638630027A8D7 /* ErrorKit_AFNetworking.h */,
+				B5368339192638630027A8D7 /* MRErrorBuilder+AFNetworking.h */,
+				B536833A192638630027A8D7 /* MRErrorBuilder+AFNetworking.m */,
+				B536833B192638630027A8D7 /* NSError+AFNetworking.h */,
+				B536833C192638630027A8D7 /* NSError+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		B536833D192638630027A8D7 /* AVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				B536833E192638630027A8D7 /* ErrorKit_AVFoundation.h */,
+				B536833F192638630027A8D7 /* MRErrorBuilder+AVFoundation.h */,
+				B5368340192638630027A8D7 /* MRErrorBuilder+AVFoundation.m */,
+				B5368341192638630027A8D7 /* MRErrorFormatter+AVFoundation.h */,
+				B5368342192638630027A8D7 /* MRErrorFormatter+AVFoundation.m */,
+				B5368343192638630027A8D7 /* NSError+AVFoundation.h */,
+				B5368344192638630027A8D7 /* NSError+AVFoundation.m */,
+			);
+			path = AVFoundation;
+			sourceTree = "<group>";
+		};
+		B5368345192638630027A8D7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B5368346192638630027A8D7 /* ErrorKit.bundle */,
+				B5368347192638630027A8D7 /* ErrorKit_Core.h */,
+				B5368348192638630027A8D7 /* ErrorKitImports.h */,
+				B5368349192638630027A8D7 /* ErrorKitMacros.h */,
+				B536834A192638630027A8D7 /* MRAbstractRecoveryAttempter.h */,
+				B536834B192638630027A8D7 /* MRAbstractRecoveryAttempter.m */,
+				B536834C192638630027A8D7 /* MRBlockRecoveryAttempter.h */,
+				B536834D192638630027A8D7 /* MRBlockRecoveryAttempter.m */,
+				B536834E192638630027A8D7 /* MRChainedRecoveryAttempter.h */,
+				B536834F192638630027A8D7 /* MRChainedRecoveryAttempter.m */,
+				B5368350192638630027A8D7 /* MRErrorBuilder.h */,
+				B5368351192638630027A8D7 /* MRErrorBuilder.m */,
+				B5368352192638630027A8D7 /* MRErrorFormatter+ErrorCode.h */,
+				B5368353192638630027A8D7 /* MRErrorFormatter+ErrorCode.m */,
+				B5368354192638630027A8D7 /* MRErrorFormatter.h */,
+				B5368355192638630027A8D7 /* MRErrorFormatter.m */,
+				B5368356192638630027A8D7 /* NSError+ErrorKit.h */,
+				B5368357192638630027A8D7 /* NSError+ErrorKit.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B5368358192638630027A8D7 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B5368359192638630027A8D7 /* ErrorKit_CoreData.h */,
+				B536835A192638630027A8D7 /* MRErrorBuilder+CoreData.h */,
+				B536835B192638630027A8D7 /* MRErrorBuilder+CoreData.m */,
+				B536835C192638630027A8D7 /* MRErrorFormatter+CoreData.h */,
+				B536835D192638630027A8D7 /* MRErrorFormatter+CoreData.m */,
+				B536835E192638630027A8D7 /* NSError+CoreData.h */,
+				B536835F192638630027A8D7 /* NSError+CoreData.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		B5368360192638630027A8D7 /* CoreLocation */ = {
+			isa = PBXGroup;
+			children = (
+				B5368361192638630027A8D7 /* ErrorKit_CoreLocation.h */,
+				B5368362192638630027A8D7 /* MRErrorFormatter+CoreLocation.h */,
+				B5368363192638630027A8D7 /* MRErrorFormatter+CoreLocation.m */,
+			);
+			path = CoreLocation;
+			sourceTree = "<group>";
+		};
+		B5368364192638630027A8D7 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				B5368365192638630027A8D7 /* ErrorKit_Default.h */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		B5368368192638630027A8D7 /* FacebookSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B5368369192638630027A8D7 /* ErrorKit_FacebookSDK.h */,
+				B536836A192638630027A8D7 /* MRErrorBuilder+FacebookSDK.h */,
+				B536836B192638630027A8D7 /* MRErrorBuilder+FacebookSDK.m */,
+				B536836C192638630027A8D7 /* MRErrorFormatter+FacebookSDK.h */,
+				B536836D192638630027A8D7 /* MRErrorFormatter+FacebookSDK.m */,
+				B536836E192638630027A8D7 /* NSError+FacebookSDK.h */,
+				B536836F192638630027A8D7 /* NSError+FacebookSDK.m */,
+				B5368370192638630027A8D7 /* UIApplication+FacebookSDK.h */,
+				B5368371192638630027A8D7 /* UIApplication+FacebookSDK.m */,
+				B5368372192638630027A8D7 /* UIResponder+FacebookSDK.h */,
+				B5368373192638630027A8D7 /* UIResponder+FacebookSDK.m */,
+			);
+			path = FacebookSDK;
+			sourceTree = "<group>";
+		};
+		B5368374192638630027A8D7 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				B5368375192638630027A8D7 /* ErrorKit_HTTP.h */,
+				B5368376192638630027A8D7 /* MRErrorBuilder+HTTP.h */,
+				B5368377192638630027A8D7 /* MRErrorBuilder+HTTP.m */,
+				B5368378192638630027A8D7 /* MRErrorFormatter+HTTP.h */,
+				B5368379192638630027A8D7 /* MRErrorFormatter+HTTP.m */,
+				B536837A192638630027A8D7 /* NSError+HTTP.h */,
+				B536837B192638630027A8D7 /* NSError+HTTP.m */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		B536837C192638630027A8D7 /* iAD */ = {
+			isa = PBXGroup;
+			children = (
+				B536837D192638630027A8D7 /* ErrorKit_iAD.h */,
+				B536837E192638630027A8D7 /* MRErrorFormatter+iAD.h */,
+				B536837F192638630027A8D7 /* MRErrorFormatter+iAD.m */,
+			);
+			path = iAD;
+			sourceTree = "<group>";
+		};
+		B5368380192638630027A8D7 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				B5368381192638630027A8D7 /* ErrorKit_JSONKit.h */,
+				B5368382192638630027A8D7 /* MRErrorBuilder+JSONKit.h */,
+				B5368383192638630027A8D7 /* MRErrorBuilder+JSONKit.m */,
+				B5368384192638630027A8D7 /* NSError+JSONKit.h */,
+				B5368385192638630027A8D7 /* NSError+JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		B5368386192638630027A8D7 /* JSONValues */ = {
+			isa = PBXGroup;
+			children = (
+				B5368387192638630027A8D7 /* ErrorKit_JSONValues.h */,
+				B5368388192638630027A8D7 /* MRErrorFormatter+JSONValues.h */,
+				B5368389192638630027A8D7 /* MRErrorFormatter+JSONValues.m */,
+				B536838A192638630027A8D7 /* NSArray+JSONValues.h */,
+				B536838B192638630027A8D7 /* NSArray+JSONValues.m */,
+				B536838C192638630027A8D7 /* NSDictionary+JSONValues.h */,
+				B536838D192638630027A8D7 /* NSDictionary+JSONValues.m */,
+				B536838E192638630027A8D7 /* NSJSONSerialization+JSONValues.h */,
+				B536838F192638630027A8D7 /* NSJSONSerialization+JSONValues.m */,
+				B5368390192638630027A8D7 /* NSMutableArray+JSONValues.h */,
+				B5368391192638630027A8D7 /* NSMutableArray+JSONValues.m */,
+				B5368392192638630027A8D7 /* NSMutableDictionary+JSONValues.h */,
+				B5368393192638630027A8D7 /* NSMutableDictionary+JSONValues.m */,
+			);
+			path = JSONValues;
+			sourceTree = "<group>";
+		};
+		B5368394192638630027A8D7 /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				B5368395192638630027A8D7 /* ErrorKit_MapKit.h */,
+				B5368396192638630027A8D7 /* MRErrorFormatter+MapKit.h */,
+				B5368397192638630027A8D7 /* MRErrorFormatter+MapKit.m */,
+			);
+			path = MapKit;
+			sourceTree = "<group>";
+		};
+		B5368398192638630027A8D7 /* MessageUI */ = {
+			isa = PBXGroup;
+			children = (
+				B5368399192638630027A8D7 /* ErrorKit_MessageUI.h */,
+				B536839A192638630027A8D7 /* MRErrorFormatter+MessageUI.h */,
+				B536839B192638630027A8D7 /* MRErrorFormatter+MessageUI.m */,
+			);
+			path = MessageUI;
+			sourceTree = "<group>";
+		};
+		B536839C192638630027A8D7 /* NSException */ = {
+			isa = PBXGroup;
+			children = (
+				B536839D192638630027A8D7 /* ErrorKit_NSException.h */,
+				B536839E192638630027A8D7 /* MRErrorBuilder+NSException.h */,
+				B536839F192638630027A8D7 /* MRErrorBuilder+NSException.m */,
+				B53683A0192638630027A8D7 /* MRErrorFormatter+NSException.h */,
+				B53683A1192638630027A8D7 /* MRErrorFormatter+NSException.m */,
+			);
+			path = NSException;
+			sourceTree = "<group>";
+		};
+		B53683A2192638630027A8D7 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				B53683A3192638630027A8D7 /* ErrorKit_Parse.h */,
+				B53683A4192638630027A8D7 /* MRErrorBuilder+Parse.h */,
+				B53683A5192638630027A8D7 /* MRErrorBuilder+Parse.m */,
+				B53683A6192638630027A8D7 /* MRErrorFormatter+Parse.h */,
+				B53683A7192638630027A8D7 /* MRErrorFormatter+Parse.m */,
+				B53683A8192638630027A8D7 /* NSError+Parse.h */,
+				B53683A9192638630027A8D7 /* NSError+Parse.m */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
+		B53683AA192638630027A8D7 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				B53683AB192638630027A8D7 /* ErrorKit_Security.h */,
+				B53683AC192638630027A8D7 /* MRErrorFormatter+Security.h */,
+				B53683AD192638630027A8D7 /* MRErrorFormatter+Security.m */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		B53683AE192638630027A8D7 /* StoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				B53683AF192638630027A8D7 /* ErrorKit_StoreKit.h */,
+				B53683B0192638630027A8D7 /* MRErrorFormatter+StoreKit.h */,
+				B53683B1192638630027A8D7 /* MRErrorFormatter+StoreKit.m */,
+			);
+			path = StoreKit;
+			sourceTree = "<group>";
+		};
+		B53683B2192638630027A8D7 /* TransitionKit */ = {
+			isa = PBXGroup;
+			children = (
+				B53683B3192638630027A8D7 /* ErrorKit_TransitionKit.h */,
+				B53683B4192638630027A8D7 /* MRErrorFormatter+TransitionKit.h */,
+				B53683B5192638630027A8D7 /* MRErrorFormatter+TransitionKit.m */,
+			);
+			path = TransitionKit;
+			sourceTree = "<group>";
+		};
+		B53683B6192638630027A8D7 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				B53683B7192638630027A8D7 /* ErrorKit_UIKit.h */,
+				B53683B8192638630027A8D7 /* MRAlertRecoveryAttempter.h */,
+				B53683B9192638630027A8D7 /* MRAlertRecoveryAttempter.m */,
+				B53683BA192638630027A8D7 /* UIAlertView+ErrorKit.h */,
+				B53683BB192638630027A8D7 /* UIAlertView+ErrorKit.m */,
+				B53683BC192638630027A8D7 /* UIApplication+ErrorKit.h */,
+				B53683BD192638630027A8D7 /* UIApplication+ErrorKit.m */,
+				B53683BE192638630027A8D7 /* UIResponder+ErrorKit.h */,
+				B53683BF192638630027A8D7 /* UIResponder+ErrorKit.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		B53683C0192638630027A8D7 /* VeriJSON */ = {
+			isa = PBXGroup;
+			children = (
+				B53683C1192638630027A8D7 /* ErrorKit_VeriJSON.h */,
+				B53683C2192638630027A8D7 /* MRErrorFormatter+VeriJSON.h */,
+				B53683C3192638630027A8D7 /* MRErrorFormatter+VeriJSON.m */,
+			);
+			path = VeriJSON;
+			sourceTree = "<group>";
+		};
+		B53BF123191CE6D800E02A72 /* DeezerObjectListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B53BF124191CE74500E02A72 /* DeezerObjectListViewController.h */,
+				B53BF125191CE74500E02A72 /* DeezerObjectListViewController.m */,
+				B53BF127191CE82F00E02A72 /* DeezerObjectListViewController_iPhone.xib */,
+				B53BF129191CE83E00E02A72 /* DeezerObjectListViewController_iPad.xib */,
+			);
+			name = DeezerObjectListViewController;
+			sourceTree = "<group>";
+		};
+		B54D0D2F19210C6000D2F384 /* DeezerCommentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B54D0D3019210C9200D2F384 /* DeezerCommentViewController.h */,
+				B54D0D3119210C9200D2F384 /* DeezerCommentViewController.m */,
+				B54D0D3519210E9A00D2F384 /* DeezerCommentViewController_iPhone.xib */,
+			);
+			name = DeezerCommentViewController;
+			sourceTree = "<group>";
+		};
+		B54D0D3719211D1000D2F384 /* DeezerRateViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B54D0D3819211D3200D2F384 /* DeezerRateViewController.h */,
+				B54D0D3919211D3200D2F384 /* DeezerRateViewController.m */,
+				B54D0D3B19211D6600D2F384 /* DeezerRateViewController_iPhone.xib */,
+			);
+			name = DeezerRateViewController;
+			sourceTree = "<group>";
+		};
+		B5BDF40119227DD800B010DC /* DeezerInputViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B5BDF40219227E0900B010DC /* DeezerInputViewController.h */,
+				B5BDF40319227E0900B010DC /* DeezerInputViewController.m */,
+			);
+			name = DeezerInputViewController;
+			sourceTree = "<group>";
+		};
+		D57D51BC1E1FF19D00B439BB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D57D51BD1E1FF19D00B439BB /* Category */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D57D51BD1E1FF19D00B439BB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D57D51C21E1FF38400B439BB /* NSDictionary */,
+				D57D51C31E1FF38400B439BB /* UIAlertController */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		D57D51C21E1FF38400B439BB /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				D57D51C71E1FF3A000B439BB /* NSDictionary+Utils.h */,
+				D57D51C81E1FF3A000B439BB /* NSDictionary+Utils.m */,
+			);
+			path = NSDictionary;
+			sourceTree = "<group>";
+		};
+		D57D51C31E1FF38400B439BB /* UIAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				D57D51C41E1FF38400B439BB /* UIAlertController+Utils.h */,
+				D57D51C51E1FF38400B439BB /* UIAlertController+Utils.m */,
+			);
+			path = UIAlertController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		249B5D5814C835B8003ED238 /* DeezerSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 249B5D9814C835B8003ED238 /* Build configuration list for PBXNativeTarget "DeezerSample" */;
+			buildPhases = (
+				249B5D5514C835B8003ED238 /* Sources */,
+				249B5D5614C835B8003ED238 /* Frameworks */,
+				249B5D5714C835B8003ED238 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeezerSample;
+			productName = DeezerSample;
+			productReference = 249B5D5914C835B8003ED238 /* DeezerSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		249B5D5014C835B8003ED238 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = Deezer;
+				TargetAttributes = {
+					249B5D5814C835B8003ED238 = {
+						DevelopmentTeam = 7QLUP2K45C;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 249B5D5314C835B8003ED238 /* Build configuration list for PBXProject "DeezerSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = 249B5D4E14C835B8003ED238;
+			productRefGroup = 249B5D5A14C835B8003ED238 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				249B5D5814C835B8003ED238 /* DeezerSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		249B5D5714C835B8003ED238 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				249B5D6814C835B8003ED238 /* InfoPlist.strings in Resources */,
+				249B5DAD14C8522C003ED238 /* DeezerSessionViewController_iPad.xib in Resources */,
+				92385B131E685BE300B26005 /* LaunchScreen.storyboard in Resources */,
+				B53683CD192638630027A8D7 /* ErrorKit.bundle in Resources */,
+				B54D0D3C19211D6600D2F384 /* DeezerRateViewController_iPhone.xib in Resources */,
+				2407F4AB14F2893F0063ED1F /* DeezerAudioPlayerController_iPad.xib in Resources */,
+				2407F4AD14F289840063ED1F /* DeezerAudioPlayerController_iPhone.xib in Resources */,
+				B5A4AAC019655B0600F2B196 /* Images.xcassets in Resources */,
+				B5CD8C7A1965487000E944FA /* DZRResources.bundle in Resources */,
+				B53BF12A191CE83E00E02A72 /* DeezerObjectListViewController_iPad.xib in Resources */,
+				2448793314F7F56600FBB256 /* DeezerSessionViewController_iPhone.xib in Resources */,
+				B53BF128191CE82F00E02A72 /* DeezerObjectListViewController_iPhone.xib in Resources */,
+				24C73D9014FE37B900ADEE6C /* DeezerSearchViewController.xib in Resources */,
+				B54D0D3619210E9A00D2F384 /* DeezerCommentViewController_iPhone.xib in Resources */,
+				240B1AFB150F8E1400F3D9D4 /* DeezerItemViewController_iPhone.xib in Resources */,
+				240B1AFF150F8E4000F3D9D4 /* DeezerItemViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		249B5D5514C835B8003ED238 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B53683EE192638630027A8D7 /* MRErrorBuilder+Parse.m in Sources */,
+				B53683D0192638630027A8D7 /* MRChainedRecoveryAttempter.m in Sources */,
+				249B5D6A14C835B8003ED238 /* main.m in Sources */,
+				249B5D6E14C835B8003ED238 /* DeezerSampleAppDelegate.m in Sources */,
+				B53683D1192638630027A8D7 /* MRErrorBuilder.m in Sources */,
+				B53683F8192638630027A8D7 /* MRErrorFormatter+VeriJSON.m in Sources */,
+				B53683F5192638630027A8D7 /* UIAlertView+ErrorKit.m in Sources */,
+				B53683D5192638630027A8D7 /* MRErrorBuilder+CoreData.m in Sources */,
+				B529D36519221BF30015AAF1 /* DeezerSearchViewController.m in Sources */,
+				B53683C6192638630027A8D7 /* NSError+Additions.m in Sources */,
+				B53683D2192638630027A8D7 /* MRErrorFormatter+ErrorCode.m in Sources */,
+				B53683CF192638630027A8D7 /* MRBlockRecoveryAttempter.m in Sources */,
+				B53683E8192638630027A8D7 /* NSMutableArray+JSONValues.m in Sources */,
+				B53683F0192638630027A8D7 /* NSError+Parse.m in Sources */,
+				B53683C9192638630027A8D7 /* NSError+AFNetworking.m in Sources */,
+				B53683E7192638630027A8D7 /* NSJSONSerialization+JSONValues.m in Sources */,
+				B53683DF192638630027A8D7 /* MRErrorFormatter+HTTP.m in Sources */,
+				B53683E1192638630027A8D7 /* MRErrorFormatter+iAD.m in Sources */,
+				B53683F2192638630027A8D7 /* MRErrorFormatter+StoreKit.m in Sources */,
+				B53683D3192638630027A8D7 /* MRErrorFormatter.m in Sources */,
+				B53BF126191CE74500E02A72 /* DeezerObjectListViewController.m in Sources */,
+				B53683CC192638630027A8D7 /* NSError+AVFoundation.m in Sources */,
+				D57D51C91E1FF3A000B439BB /* NSDictionary+Utils.m in Sources */,
+				B53683C8192638630027A8D7 /* MRErrorBuilder+AFNetworking.m in Sources */,
+				B53683CA192638630027A8D7 /* MRErrorBuilder+AVFoundation.m in Sources */,
+				B53683C4192638630027A8D7 /* MRErrorFormatter+Accounts.m in Sources */,
+				249B5DCC14C87367003ED238 /* DeezerSession.m in Sources */,
+				B53683D8192638630027A8D7 /* MRErrorFormatter+CoreLocation.m in Sources */,
+				B53683D4192638630027A8D7 /* NSError+ErrorKit.m in Sources */,
+				B53683E4192638630027A8D7 /* MRErrorFormatter+JSONValues.m in Sources */,
+				7DE7424114F954F6008E0632 /* PlayerAndBufferSlider.m in Sources */,
+				B53683EC192638630027A8D7 /* MRErrorBuilder+NSException.m in Sources */,
+				B53683D7192638630027A8D7 /* NSError+CoreData.m in Sources */,
+				240B1AFA150F8E1400F3D9D4 /* DeezerItemViewController.m in Sources */,
+				B53683E2192638630027A8D7 /* MRErrorBuilder+JSONKit.m in Sources */,
+				B53683E3192638630027A8D7 /* NSError+JSONKit.m in Sources */,
+				B53683D6192638630027A8D7 /* MRErrorFormatter+CoreData.m in Sources */,
+				B53683E9192638630027A8D7 /* NSMutableDictionary+JSONValues.m in Sources */,
+				B59CBC7C19460F6100EABBBC /* DeezerAudioPlayerController.m in Sources */,
+				B53683E5192638630027A8D7 /* NSArray+JSONValues.m in Sources */,
+				B53683DC192638630027A8D7 /* UIApplication+FacebookSDK.m in Sources */,
+				B53683EB192638630027A8D7 /* MRErrorFormatter+MessageUI.m in Sources */,
+				B53683F1192638630027A8D7 /* MRErrorFormatter+Security.m in Sources */,
+				B53683DD192638630027A8D7 /* UIResponder+FacebookSDK.m in Sources */,
+				B53BF122191CDCF800E02A72 /* DeezerSessionViewController.m in Sources */,
+				B53683DE192638630027A8D7 /* MRErrorBuilder+HTTP.m in Sources */,
+				B5BDF40419227E0900B010DC /* DeezerInputViewController.m in Sources */,
+				B53683F3192638630027A8D7 /* MRErrorFormatter+TransitionKit.m in Sources */,
+				B53683DB192638630027A8D7 /* NSError+FacebookSDK.m in Sources */,
+				B53683F4192638630027A8D7 /* MRAlertRecoveryAttempter.m in Sources */,
+				B53683CB192638630027A8D7 /* MRErrorFormatter+AVFoundation.m in Sources */,
+				B53683F7192638630027A8D7 /* UIResponder+ErrorKit.m in Sources */,
+				B53683D9192638630027A8D7 /* MRErrorBuilder+FacebookSDK.m in Sources */,
+				B54D0D3A19211D3200D2F384 /* DeezerRateViewController.m in Sources */,
+				B53683EA192638630027A8D7 /* MRErrorFormatter+MapKit.m in Sources */,
+				B53683ED192638630027A8D7 /* MRErrorFormatter+NSException.m in Sources */,
+				B53683EF192638630027A8D7 /* MRErrorFormatter+Parse.m in Sources */,
+				B54D0D3219210C9200D2F384 /* DeezerCommentViewController.m in Sources */,
+				B53683C7192638630027A8D7 /* MRErrorFormatter+Admob.m in Sources */,
+				B53683C5192638630027A8D7 /* MRErrorBuilder+Additions.m in Sources */,
+				B53683E0192638630027A8D7 /* NSError+HTTP.m in Sources */,
+				D57D51C61E1FF38400B439BB /* UIAlertController+Utils.m in Sources */,
+				B53683DA192638630027A8D7 /* MRErrorFormatter+FacebookSDK.m in Sources */,
+				B53683F6192638630027A8D7 /* UIApplication+ErrorKit.m in Sources */,
+				B53683E6192638630027A8D7 /* NSDictionary+JSONValues.m in Sources */,
+				B53683CE192638630027A8D7 /* MRAbstractRecoveryAttempter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		249B5D6614C835B8003ED238 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				249B5D6714C835B8003ED238 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		249B5D9614C835B8003ED238 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B528CD3C198A854000F3F4BD /* deezer.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../Deezer/Deezer\"/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		249B5D9714C835B8003ED238 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B528CD3C198A854000F3F4BD /* deezer.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../Deezer/Deezer\"/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		249B5D9914C835B8003ED238 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B528CD3C198A854000F3F4BD /* deezer.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DeezerSample/DeezerSample-Prefix.pch";
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "DeezerSample/DeezerSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-Debug",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deezer.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "$(inherited)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		249B5D9A14C835B8003ED238 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B528CD3C198A854000F3F4BD /* deezer.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DeezerSample/DeezerSample-Prefix.pch";
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "DeezerSample/DeezerSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deezer.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "$(inherited)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B5BEC6381B4AC16400BF4D1F /* Developer */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B528CD3C198A854000F3F4BD /* deezer.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../Deezer/Deezer\"/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Developer;
+		};
+		B5BEC6391B4AC16400BF4D1F /* Developer */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B528CD3C198A854000F3F4BD /* deezer.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DeezerSample/DeezerSample-Prefix.pch";
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "DeezerSample/DeezerSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-Debug",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deezer.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "$(inherited)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Developer;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		249B5D5314C835B8003ED238 /* Build configuration list for PBXProject "DeezerSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				249B5D9614C835B8003ED238 /* Debug */,
+				B5BEC6381B4AC16400BF4D1F /* Developer */,
+				249B5D9714C835B8003ED238 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		249B5D9814C835B8003ED238 /* Build configuration list for PBXNativeTarget "DeezerSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				249B5D9914C835B8003ED238 /* Debug */,
+				B5BEC6391B4AC16400BF4D1F /* Developer */,
+				249B5D9A14C835B8003ED238 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 249B5D5014C835B8003ED238 /* Project object */;
+}

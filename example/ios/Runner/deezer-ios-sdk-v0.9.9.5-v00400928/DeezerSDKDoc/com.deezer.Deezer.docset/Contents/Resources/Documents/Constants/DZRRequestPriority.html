@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title></title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">Deezer </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Deezer</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title"></h1>
+
+					
+
+                    
+
+					
+
+                    
+                    <h3 class="subsubtitle method-title">DZRRequestPriority</h3>
+                    
+					
+					<div class="section section-overview">
+                        <p>Priority levels for requests scheduling in the network stack.</p>
+					</div>
+					
+					
+                    <div class="section">
+                        <!-- display enum values -->
+                        
+                        <h4 class="method-subtitle">Definition</h4>
+                        <code>typedef NS_ENUM(NSInteger, DZRRequestPriority ) {<br>
+                            
+                            &nbsp;&nbsp; <a href="">DZRRequestPriorityLow</a> = -4,<br>
+                            
+                            &nbsp;&nbsp; <a href="">DZRRequestPriorityNormal</a> = 0,<br>
+                            
+                            &nbsp;&nbsp; <a href="">DZRRequestPriorityHigh</a> = 4,<br>
+                            
+                            };</code>
+                    
+                    </div>
+                    
+                    <div class="section section-methods">
+                        <h4 class="method-subtitle">Constants</h4>
+                        <dl class="termdef">
+                            
+                            <dt><a name="" title="DZRRequestPriorityLow"></a><code>DZRRequestPriorityLow</code></dt>
+<dd>
+
+
+<p>The requests using this priority are not guaranteed to de issued any
+     time soon and can be delayed until the manager can batch them or some
+     request with higher priority is scheduled. You can use this priority
+     for example to send some tacking information.</p>
+
+
+
+
+
+    
+	<p>
+		 <code class="declared-in-ref">DZRNetworkRequest.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="DZRRequestPriorityNormal"></a><code>DZRRequestPriorityNormal</code></dt>
+<dd>
+
+
+<p>This is the default priority. Requests
+     configured with this priority will be sent as soon as possible but can
+     be delayed when the manager is busy handling higher priorities or
+     prior requests. You can let the request priority set to this value
+     safely most of the time</p>
+
+
+
+
+
+    
+	<p>
+		 <code class="declared-in-ref">DZRNetworkRequest.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="DZRRequestPriorityHigh"></a><code>DZRRequestPriorityHigh</code></dt>
+<dd>
+
+
+<p>This is the highest priority you can
+     specify for a request. This kind of request is processed by the
+     manager as an absolute priority. If no slot is currently available for
+     request with this priority, the manager can cancel a lower priority
+     request and queue it back in order to free a slot. You should use this
+     priority carefully for times when you really need information quickly
+     from the server.</p>
+
+
+
+
+
+    
+	<p>
+		 <code class="declared-in-ref">DZRNetworkRequest.h</code>.
+	</p>
+	
+</dd>
+                            
+                        </dl>
+                    </div>
+                    
+
+                    
+                    
+
+                    
+
+                    
+                    <div class="method-subsection declared-in-section">
+                        <h4 class="method-subtitle"></h4>
+                        <p><code class="declared-in-ref">DZRNetworkRequest.h</code></p>
+                    </div>
+                    
+                    
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2019 Deezer. All rights reserved. Updated: 2019-07-31</p>
+						
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
