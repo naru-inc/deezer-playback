@@ -4,13 +4,13 @@
 Pod::Spec.new do |s|
   s.name             = 'deezer_playback'
   s.version          = '0.0.1'
-  s.summary          = 'A new flutter plugin project.'
+  s.summary          = 'Deezer All In One Plugin.'
   s.description      = <<-DESC
-A new flutter plugin project.
+A Deezer plugin for flutter.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://github.com/naru-inc/deezer-playback/'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'NARU Entreprise' => 'naru-inc@gmail.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'

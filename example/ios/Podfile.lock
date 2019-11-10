@@ -1,0 +1,22 @@
+PODS:
+  - deezer_playback (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - deezer_playback (from `.symlinks/plugins/deezer_playback/ios`)
+  - Flutter (from `.symlinks/flutter/ios`)
+
+EXTERNAL SOURCES:
+  deezer_playback:
+    :path: ".symlinks/plugins/deezer_playback/ios"
+  Flutter:
+    :path: ".symlinks/flutter/ios"
+
+SPEC CHECKSUMS:
+  deezer_playback: a2ca65be748386d03a468c0e767452dfead2a3f6
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+
+PODFILE CHECKSUM: 10ae9c18d12c9ffc2275c9a159a3b1e281990db0
+
+COCOAPODS: 1.8.3

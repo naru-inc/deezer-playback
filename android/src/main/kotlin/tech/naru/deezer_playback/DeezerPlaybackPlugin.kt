@@ -138,9 +138,7 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
 
     }
     private fun iniatilizeDeezer(appId: String?, result:Result) {
-         if (mDeezerConnect!!.isSessionValid) {
-           result.success(true)
-         }else if (appId != null) {
+       if (appId != null) {
             mDeezerConnect = DeezerConnect(registrar.context(),appId)
            
             // The set of Deezer Permissions needed by the app

@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   flutter:
-    sdk: flutter
+    sdk: flutter/Users/Calin/Downloads/deezer-ios-sdk-v0.9.9.5-v00400928
   dio: ^3.0.3
   json_annotation:
 
