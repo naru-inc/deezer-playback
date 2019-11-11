@@ -79,7 +79,7 @@ class _MyAppState extends State<MyApp> {
         setState(() {
           _connectedToDeezer = authorised;
         });
-        print("we authorized deezer"+_connectedToDeezer.toString());
+        print("we authorized deezer" + _connectedToDeezer.toString());
       }, onError: (error) {
         // If the method call trows an error, print the error to see what went wrong
         print(error);
@@ -88,19 +88,18 @@ class _MyAppState extends State<MyApp> {
       print('Failed to connect.');
     }
   }
+
   //Search for Tracks using wWb API
-Future<List<DeezerTrack>> search(String search) async {
+  Future<List<DeezerTrack>> search(String search) async {
     try {
-List response = await DeezerPlayback.searchTracks(search);
+      List response = await DeezerPlayback.searchTracks(search);
 
-List<DeezerTrack> deezerTracks =[];
-response.forEach((json)=> {
-   deezerTracks.add(DeezerTrack.fromDeezer(json))
-});
-print(deezerTracks[0].title);
-  
+      List<DeezerTrack> deezerTracks = [];
+      response
+          .forEach((json) => {deezerTracks.add(DeezerTrack.fromDeezer(json))});
+      print(deezerTracks[0].title);
+
       return deezerTracks;
-
     } catch (e) {
       print(e);
       return null;
@@ -109,18 +108,17 @@ print(deezerTracks[0].title);
 
   Future<DeezerTrack> getTrack(String id) async {
     try {
-Object response = await DeezerPlayback.getTrack(id);
+      Object response = await DeezerPlayback.getTrack(id);
 
-DeezerTrack deezerTracks = DeezerTrack.fromDeezer(response);
+      DeezerTrack deezerTracks = DeezerTrack.fromDeezer(response);
 
-  
       return deezerTracks;
-
     } catch (e) {
       print(e);
       return null;
     }
   }
+
   /// Play an song by Deezer track/album/playlist id
   Future<void> play(String id) async {
     try {

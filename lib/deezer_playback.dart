@@ -3,26 +3,24 @@ import 'dart:async';
 import 'package:dio/dio.dart';
 import 'package:flutter/services.dart';
 
-
 class DeezerPlayback {
-  static const MethodChannel _channel =
-      const MethodChannel('deezer_playback');
+  static const MethodChannel _channel = const MethodChannel('deezer_playback');
 
   static Future<String> get platformVersion async {
     final String version = await _channel.invokeMethod('getPlatformVersion');
     return version;
   }
+
   /// The spotifyConnect method can be called to initialize spotify
-  static Future<bool> iniatilizeDeezer(
-      {String appId}) async {
-    final bool inialized = await _channel.invokeMethod(
-        "iniatilizeDeezer", {"appId": appId});
+  static Future<bool> iniatilizeDeezer({String appId}) async {
+    final bool inialized =
+        await _channel.invokeMethod("iniatilizeDeezer", {"appId": appId});
     return inialized;
   }
-    /// The spotifyConnect method can be called to initialize spotify
+
+  /// The spotifyConnect method can be called to initialize spotify
   static Future<bool> connectToDeezer() async {
-    final bool connect = await _channel.invokeMethod(
-        "connectDeezer");
+    final bool connect = await _channel.invokeMethod("connectDeezer");
     return connect;
   }
 
@@ -44,7 +42,6 @@ class DeezerPlayback {
     return resumed;
   }
 
-
   /// The getPlaybackPosition method is used to get the current tracks playback position
   static Future<int> getPlaybackPosition() async {
     final int position = await _channel.invokeMethod("playbackPositionDeezer");
@@ -57,7 +54,6 @@ class DeezerPlayback {
     final bool connected = await _channel.invokeMethod("isConnected");
     return connected;
   }
-
 
   /// The skipNext method is used to play the next song
   static Future<bool> skipNext() async {
@@ -89,11 +85,13 @@ class DeezerPlayback {
         "seekToRelativePosition", {"relativeTime": relativeTime.toString()});
     return success;
   }
-static Future<List> searchTracks(String search) async {
+
+  static Future<List> searchTracks(String search) async {
     Dio dio = new Dio();
     try {
-Response response = await dio.get("https://api.deezer.com/search?q=track:"+search+"&strict=off");   
- var jsons = (response.data)["data"] as List;
+      Response response = await dio.get(
+          "https://api.deezer.com/search?q=track:" + search + "&strict=off");
+      var jsons = (response.data)["data"] as List;
       return jsons;
 
       //return tracks.toList();
@@ -102,11 +100,11 @@ Response response = await dio.get("https://api.deezer.com/search?q=track:"+searc
       return null;
     }
   }
-   static Future<Object> getTrack(String id) async {
+
+  static Future<Object> getTrack(String id) async {
     Dio dio = new Dio();
     try {
-      Response response = await dio.get(
-          "https://api.deezer.com/track/" + id);
+      Response response = await dio.get("https://api.deezer.com/track/" + id);
 
       var json = (response.data);
       return json;
