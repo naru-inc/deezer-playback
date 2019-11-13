@@ -3,16 +3,16 @@ class DeezerTrack {
   String title;
   int duration;
   String artistName;
-  String albumName; 
-DeezerTrack(
-      {this.id,
-      this.title,
-      this.duration,
-      this.artistName,
-      this.albumName,});
+  String albumName;
+  DeezerTrack({
+    this.id,
+    this.title,
+    this.duration,
+    this.artistName,
+    this.albumName,
+  });
 
-factory DeezerTrack.fromDeezer(Map<String,dynamic> json) {
-    
+  factory DeezerTrack.fromDeezer(Map<String, dynamic> json) {
     return new DeezerTrack(
         id: json['id'].toString() ?? null,
         title: json['title'] ?? false,

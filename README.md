@@ -16,6 +16,8 @@ Deezer Playback Plugin.
 * Play Next
 * Play Previous
 * Repeat 
+* Search For Tracks 
+* Get Track 
 
 ## Installation
 
@@ -100,6 +102,8 @@ After this you can use all the available methods
 |seekToRelativePosition|Seeks to relative position|+-time(mS)||
 | toggleRepeat | Toggle Repeat options    |     ||
 | getPlaybackPosition | Get's the current tracks playback position       |    ||
+| searchTracks | Get tracks by searching      |   any keyword ||
+| getTrack | Get track by ID      |   id(string) ||
 
 ## Changelog
 

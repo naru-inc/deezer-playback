@@ -1,7 +1,7 @@
 name: deezer_playback
-description: A Deezer plugin for Flutter.
-version: 0.0.1
-author: naru.tech <naru.inc@gmail.com>
+description: A new flutter plugin project.
+version: 0.0.2
+author: NARU ENTREPRISE
 homepage: https://github.com/naru-inc/deezer-playback
 
 environment:
@@ -10,6 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  dio: ^2.1.16
+  json_annotation:
 
 dev_dependencies:
   flutter_test:

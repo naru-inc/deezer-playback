@@ -139,13 +139,22 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
 
     }
     private fun iniatilizeDeezer(appId: String?, result:Result) {
-         if (mDeezerConnect!!.isSessionValid) {
-           result.success(true)
-         }else if (appId != null) {
+         if (appId != null) {
+           if(mDeezerConnect != null && mDeezerConnect!!.isSessionValid == false){
+              mDeezerConnect = DeezerConnect(registrar.context(),appId)
+           
+            // The set of Deezer Permissions needed by the app
+            result.success(true)
+              } else if (mDeezerConnect != null && mDeezerConnect!!.isSessionValid){
+            result.success(true)
+             } else {
+
             mDeezerConnect = DeezerConnect(registrar.context(),appId)
            
             // The set of Deezer Permissions needed by the app
             result.success(true)
+        }
+        
         } else {
 
             result.error("connect", "error", "the Id you're making is not valid")
@@ -199,26 +208,6 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
             result.success(false)
         }
     }
-/**
-  //THIS SHOULD ONLY BE CALLED ONCE
-  private fun getAuthToken(clientId: String?,
-                           redirectUrl: String?,
-                           result: Result){
 
-    try {
-      Connection.openLoginActivity(
-              registrar.activity(), 1337,
-              AuthenticationRequest.Builder(clientId,AuthenticationResponse.Type.TOKEN,redirectUrl)
-                      .setScopes(arrayOf("user-modify-playback-state")).build())
-    }catch (err:Throwable){
-      Log.v("getAuthTOkenError",err.message)
-    }
-    registrar.addActivityResultListener { requestCode, resultCode, intent ->
-      if (requestCode == 1337){
-        result.success(AuthenticationClient.getResponse(resultCode,intent).accessToken)
-      }
-      true
-    }
-  }*/
 
 }

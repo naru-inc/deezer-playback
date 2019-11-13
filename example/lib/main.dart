@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
     initPlatformState();
     initConnector();
     connect();
-    searchTrack("metallica");
+    search("metallica");
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
@@ -79,7 +79,7 @@ class _MyAppState extends State<MyApp> {
         setState(() {
           _connectedToDeezer = authorised;
         });
-        print("we authorized deezer"+_connectedToDeezer.toString());
+        print("we authorized deezer" + _connectedToDeezer.toString());
       }, onError: (error) {
         // If the method call trows an error, print the error to see what went wrong
         print(error);
@@ -88,31 +88,37 @@ class _MyAppState extends State<MyApp> {
       print('Failed to connect.');
     }
   }
-Future<List<DeezerTrack>> searchTrack(String search) async {
+
+  //Search for Tracks using wWb API
+  Future<List<DeezerTrack>> search(String search) async {
     try {
-Response response = await dio.get("https://api.deezer.com/search?q=track:"+search+"&strict=off");   
- print(response.data);
- var jsons = (response.data)["data"] as List;
+      List response = await DeezerPlayback.searchTracks(search);
 
-List<DeezerTrack> deezerTracks =[];
-jsons.forEach((json)=> {
-   deezerTracks.add(DeezerTrack.fromDeezer(json))
-});
-print(deezerTracks[0].title);
-      /*
-     static const album = SearchType("album");
-  static const artist = SearchType("artist");
-  static const playlist = SearchType("playlist");
-  static const track = SearchType("track");
-  */
+      List<DeezerTrack> deezerTracks = [];
+      response
+          .forEach((json) => {deezerTracks.add(DeezerTrack.fromDeezer(json))});
+      print(deezerTracks[0].title);
+
       return deezerTracks;
-
-      //return tracks.toList();
     } catch (e) {
       print(e);
       return null;
     }
   }
+
+  Future<DeezerTrack> getTrack(String id) async {
+    try {
+      Object response = await DeezerPlayback.getTrack(id);
+
+      DeezerTrack deezerTracks = DeezerTrack.fromDeezer(response);
+
+      return deezerTracks;
+    } catch (e) {
+      print(e);
+      return null;
+    }
+  }
+
   /// Play an song by Deezer track/album/playlist id
   Future<void> play(String id) async {
     try {
