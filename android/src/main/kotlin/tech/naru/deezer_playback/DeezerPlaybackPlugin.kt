@@ -80,6 +80,7 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
         )
       call.method == "playDeezer" -> play( trackID = call.argument("id"),result = result)
       call.method == "pauseDeezer" -> playbackControls.pause(result = result)
+       call.method == "getDeezerToken" -> getToken(result = result)
       call.method == "resumeDeezer" -> playbackControls.resume(result = result)
       call.method == "playbackPositionDeezer" -> getPlaybackPosition(result)
       call.method == "isConnected" -> connected(result)
@@ -180,7 +181,17 @@ class DeezerPlaybackPlugin(private var registrar: PluginRegistry.Registrar) : Me
         if (mDeezerConnect != null) {
             result.success( trackPlayer!!.position)
         }
+    }  
+    
+    private fun getToken(result: Result) {
+        return if (mDeezerConnect != null) {
+            result.success(mDeezerConnect!!.accessToken)
+        } else {
+            result.success(null)
+        }
     }
+
+    
     private fun connected(result: Result) {
         return if (mDeezerConnect != null) {
             result.success(mDeezerConnect!!.isSessionValid)
