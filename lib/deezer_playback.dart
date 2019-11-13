@@ -23,20 +23,19 @@ class DeezerPlayback {
     final bool connect = await _channel.invokeMethod("connectDeezer");
     return connect;
   }
-
+ static Future<String> getToken() async {
+    final String token = await _channel.invokeMethod('getDeezerToken');
+    return token;
+  }
   /// The play method is used to play an song/album/playlist
   static Future<bool> play(String id) async {
     final bool success = await _channel.invokeMethod("playDeezer", {"id": id});
     return success;
   }
-   static Future<String> getToken() async {
-    final String token = await _channel.invokeMethod('getDeezerToken');
-    return token;
-  }
+  
 
   /// The pause method is used to pause the current playing song
   static Future<bool> pause() async {
-    final bool paused = await _channel.invokeMethod("pauseDeezer");
     final bool paused = await _channel.invokeMethod("pauseDeezer");
     return paused;
   }
